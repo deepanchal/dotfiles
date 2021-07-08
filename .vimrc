@@ -81,7 +81,7 @@ filetype plugin on
 " Always use System Clipboard
 set clipboard+=unnamedplus
 " Override paste to strip new lines
-nmap p :r!/usr/bin/wl-paste -n<CR>
+" nmap p :r!/usr/bin/wl-paste -n<CR>
 " Highlight matching search patterns
 set hlsearch
 " Enable incremental search
