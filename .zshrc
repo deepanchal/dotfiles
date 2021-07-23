@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Start ssh-agent with keychain
+keychain id_rsa --agents ssh --quiet 
+
 # Load Aliases
 source $HOME/.aliases
 
@@ -92,10 +95,10 @@ plugins=(
 	yarn			 # yarn completions
 	asdf             # extendable version manager
 	#eksctl           # eksctl completions
-	#helm             # helm completions
-	#minikube         # minikube completions
+	helm             # helm completions
+	minikube         # minikube completions
 	#fd 			     # find replacement
-	#aws 			 # aws completions
+	aws 			 # aws completions
 	rsync			 # rsync aliases
 	#flutter          # flutter autocompletion
 	python           # python helpers
@@ -104,7 +107,7 @@ plugins=(
 	colored-man-pages  # colorize man pages
 	common-aliases     # colorize man pages
 	copybuffer         # binds ctrl-o to copy currently typed cmd
-	#docker-compose     # docker-compose aliases
+	docker-compose     # docker-compose aliases
 	#django             # django aliases
 	autojump		   # 'j' command - smart cd
 	git                # git alias/completions
@@ -122,7 +125,7 @@ plugins=(
 	web-search		   # provides web_search/google cmd
 	fancy-ctrl-z	   # ctrl-z opens/closes vim
 	#encode64           # encode/decode64 cmds
-	#kubectl            # kubctl autocompletion
+	kubectl            # kubctl autocompletion
 	#keep              # keep cli completions
 	zsh_reload         # reload function
 	zsh-interactive-cd         # interactive tab completion for cd
