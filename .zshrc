@@ -5,6 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Start GNUPG Agent
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 # Start ssh-agent with keychain
 keychain id_rsa --agents ssh --quiet 
 
