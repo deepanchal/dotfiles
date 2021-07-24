@@ -1,9 +1,9 @@
 ## ZSH Aliases
 
 # Replacements
-alias vim="nvim"	# neovim
-alias cat='batcat'      # Bat
-alias p='pnpm'
+alias vim="nvim"	        # neovim https://github.com/neovim/neovim
+alias cat="batcat"              # batcat https://github.com/sharkdp/bat
+alias ls="colorls --gs"         # colorls https://github.com/athityakumar/colorls
 
 # Config Aliases
 alias zshcfg="$EDITOR ~ZSH_CUSTOM"
