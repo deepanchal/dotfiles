@@ -136,6 +136,7 @@ plugins=(
 	zsh-autosuggestions	       # auto suggestions
 	zsh-syntax-highlighting    # !! must be last - syntx hl
 	#zsh-vim-mode              # must be loaded after syntax hl
+        a5r                     # adstakr autocompletions
 )
 
 source $ZSH/oh-my-zsh.sh
