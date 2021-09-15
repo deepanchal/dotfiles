@@ -1,0 +1,64 @@
+"" Source your .vimrc
+source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Clipboard
+"set clipboard=cb
+"set clipboard-=ideaput
+set clipboard+=unnamed
+
+" IdeaVim Settings
+set ideajoin " Join Lines intelligently
+set multiple-cursors " Enabled multi cursor support
+set ideamarks " Sync marks and idea bookmarks
+
+" Use Q for formatting the current paragraph (or visual selection)
+vmap Q gq
+nmap Q gqap
+
+" These create newlines like o and O but stay in normal mode
+nmap zj o<Esc>k
+nmap zk O<Esc>j
+
+" Refactorings
+vmap T :action Refactorings.QuickListPopupAction<CR>
+nmap <leader>rr :action RenameElement<CR>
+nmap <leader>rg :action Generate<CR>
+nmap <leader>rI :action OptimizeImports<CR>
+" Inspection
+nmap <leader>rc :action InspectCode<CR>
+" View Recent Files
+nmap <leader>a :action RecentChangedFiles<CR>
+
+" Search
+nmap <leader>/ :action Find<CR>
+nmap <leader>\ :action FindInPath<CR>
+
+" Moving lines
+nmap [e :action MoveLineUp<CR>
+nmap ]e :action MoveLineDown<CR>
+" Moving statements
+nmap [s :action MoveStatementUp<CR>
+nmap ]s :action MoveStatementDown<CR>
+
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
