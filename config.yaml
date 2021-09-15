@@ -45,6 +45,9 @@ dotfiles:
   f_face:
     src: face
     dst: ~/.face
+  f_zshenv:
+    src: zshenv
+    dst: ~/.zshenv
 profiles:
   manjarog:
     dotfiles:
@@ -62,3 +65,4 @@ profiles:
     - f_config.yml
     - f_init.vim
     - f_face
+    - f_zshenv
