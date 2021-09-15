@@ -1,0 +1,159 @@
+" Install vim-plug if needed
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+" Make sure you use single quotes
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'junegunn/vim-easy-align'
+" Vim Easymotion
+Plug 'easymotion/vim-easymotion'
+" Any valid git URL is allowed
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Sudo Helper
+Plug 'lambdalisue/suda.vim'
+" Autocomplete + Snippets
+"Plug 'roxma/nvim-completion-manager' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" On-demand loading
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+" Nerd Tree
+Plug 'preservim/nerdtree'
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
+" Nerd Commenter
+Plug 'scrooloose/nerdcommenter'
+" Vim Shebang
+Plug 'sbdchd/vim-shebang'
+" Vim Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Auto Save
+Plug '907th/vim-auto-save'
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Syntax Checking
+Plug 'vim-syntastic/syntastic'
+" Git Gutter
+Plug 'airblade/vim-gitgutter'
+" Indent Guides
+Plug 'nathanaelkane/vim-indent-guides'
+" Vim Multi Cursor
+" Plug 'terryma/vim-multiple-cursors'
+" Vim Denite
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+" Vim Taskwarrior
+Plug 'blindfs/vim-taskwarrior'
+" Vim Tmux Nav
+Plug 'christoomey/vim-tmux-navigator'
+" HCL Syntax and Formatting
+Plug 'fatih/vim-hclfmt'
+Plug 'b4b4r07/vim-hcl'
+" Vim TOML
+Plug 'cespare/vim-toml'
+" Vim Markdown Composer
+Plug 'euclio/vim-markdown-composer'
+" Initialize plugin system
+call plug#end()
+" Enable Smart Sudo
+let g:suda_smart_edit = 1
+" Set Python Exec
+let g:python3_host_prog = '/home/bradenmars/.pyenv/versions/3.7.3/bin/python'
+" Enable Mouse
+set mouse=a
+" Status bar
+set laststatus=2
+" Line Numbers
+set number
+" Relative Line Numbers
+set relativenumber
+" Encoding
+set encoding=utf-8
+set fileencoding=utf-8
+" Enable filetype plugin
+filetype plugin on
+" Always use System Clipboard
+set clipboard+=unnamedplus
+" Override paste to strip new lines
+" nmap p :r!/usr/bin/wl-paste -n<CR>
+" Highlight matching search patterns
+set hlsearch
+" Enable incremental search
+set incsearch
+" Include matching uppercase words with lowercase search term
+set ignorecase
+" Include only uppercase words with uppercase search term
+set smartcase
+" vim auto save config
+let g:auto_save = 1 "enable autosave
+" Automatically save and load folds
+"autocmd BufWinLeave *.* mkview
+"autocmd BufWinEnter *.* silent loadview"
+" Syntastic ConfigE
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'minimalist'
+" Prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 1
+" Taskwarrior.vim
+let g:task_report_name = 'in'
+let g:taskrc_override = 'rc.defaultwidth=0'
+" Git Gutter Config
+set updatetime=100
+" Set Leader
+let mapleader = " "
+" See Leader
+set showcmd
+" Quick Delete Line
+nmap <leader>d dd
+" JK Remap
+inoremap jk <esc>
+" inoremap <esc> <nop>
+" No Highlight Map
+map <C-n> :nohl<CR>
+" Remap Ctrl+W to Caps Lock (Sway caps lock -> esc)
+nmap <esc> <C-w>
+" Color Scheme
+colorscheme default
+set background=dark
+" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
+" Set indent/tab = 4 spaces + Sane Editing
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" Denite Mappings
+autocmd FileType denite call s:denite_my_settings()
+function! s:denite_my_settings() abort
+  nnoremap <silent><buffer><expr> <CR>
+  \ denite#do_map('do_action')
+  nnoremap <silent><buffer><expr> d
+  \ denite#do_map('do_action', 'delete')
+  nnoremap <silent><buffer><expr> p
+  \ denite#do_map('do_action', 'preview')
+  nnoremap <silent><buffer><expr> q
+  \ denite#do_map('quit')
+  nnoremap <silent><buffer><expr> i
+  \ denite#do_map('open_filter_buffer')
+  nnoremap <silent><buffer><expr> <Space>
+  \ denite#do_map('toggle_select').'j'
+endfunction

@@ -9,8 +9,12 @@ dotfiles:
   f_zshrc:
     src: zshrc
     dst: ~/.zshrc
+  f_vimrc:
+    src: vimrc
+    dst: ~/.vimrc
 profiles:
   manjarog:
     dotfiles:
     - f_bashrc
     - f_zshrc
+    - f_vimrc
