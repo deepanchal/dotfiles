@@ -12,9 +12,13 @@ dotfiles:
   f_vimrc:
     src: vimrc
     dst: ~/.vimrc
+  f_ideavimrc:
+    src: ideavimrc
+    dst: ~/.ideavimrc
 profiles:
   manjarog:
     dotfiles:
     - f_bashrc
     - f_zshrc
     - f_vimrc
+    - f_ideavimrc
