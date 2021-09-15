@@ -1,0 +1,11 @@
+[user]
+	email = deep302001@gmail.com
+	name = Deep Panchal
+	signingkey = 45FE8F325F0C658648AD56AFC0C2511B2C7608F4
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgSign = true

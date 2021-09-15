@@ -15,6 +15,9 @@ dotfiles:
   f_ideavimrc:
     src: ideavimrc
     dst: ~/.ideavimrc
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
 profiles:
   manjarog:
     dotfiles:
@@ -22,3 +25,4 @@ profiles:
     - f_zshrc
     - f_vimrc
     - f_ideavimrc
+    - f_gitconfig
