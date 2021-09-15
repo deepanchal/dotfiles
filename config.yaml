@@ -36,6 +36,9 @@ dotfiles:
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
+  f_config.yml:
+    src: config/fusuma/config.yml
+    dst: ~/.config/fusuma/config.yml
 profiles:
   manjarog:
     dotfiles:
@@ -50,3 +53,4 @@ profiles:
     - f_aliases.zsh
     - f__a5r
     - f_config
+    - f_config.yml
