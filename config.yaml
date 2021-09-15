@@ -39,6 +39,9 @@ dotfiles:
   f_config.yml:
     src: config/fusuma/config.yml
     dst: ~/.config/fusuma/config.yml
+  f_init.vim:
+    src: config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
 profiles:
   manjarog:
     dotfiles:
@@ -54,3 +57,4 @@ profiles:
     - f__a5r
     - f_config
     - f_config.yml
+    - f_init.vim
