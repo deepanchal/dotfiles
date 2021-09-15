@@ -1,0 +1,75 @@
+# Window
+window:
+        dimensions:
+                columns: 100
+                lines: 25
+
+        padding:
+                x: 2
+                y: 2
+
+# Colors (Monokai Soda)
+colors:
+        # Default colors
+        primary:
+                background: "0x1a1a1a"
+                foreground: "0xc4c5b5"
+
+        # Normal colors
+        normal:
+                black: "0x1a1a1a"
+                red: "0xf4005f"
+                green: "0x98e024"
+                yellow: "0xfa8419"
+                blue: "0x9d65ff"
+                magenta: "0xf4005f"
+                cyan: "0x58d1eb"
+                white: "0xc4c5b5"
+
+        # Bright colors
+        bright:
+                black: "0x625e4c"
+                red: "0xf4005f"
+                green: "0x98e024"
+                yellow: "0xe0d561"
+                blue: "0x9d65ff"
+                magenta: "0xf4005f"
+                cyan: "0x58d1eb"
+                white: "0xf6f6ef"
+
+# Font Configuration
+font:
+        size: 14
+        normal:
+                family: Firacode Nerd Font
+
+# Cursor Config
+cursor:
+        style: Beam
+
+# Mouse
+mouse:
+        hide_when_typing: true
+        #url:
+                #modifiers: Control
+
+# Background opacity
+#
+# Window opacity as a floating point number from `0.0` to `1.0`.
+# The value `0.0` is completely transparent and `1.0` is opaque.
+background_opacity: 0.97
+
+# Key bindings
+key_bindings:
+        - { key: L, mods: Control|Shift, action: ClearHistory }
+        - { key: Q, mods: Control|Shift, action: Quit }
+        - { key: Z, mods: Control|Shift, action: ToggleFullscreen }
+
+        - { key: Equals, mods: Control, action: ResetFontSize }
+        - { key: NumpadAdd, mods: Control|Shift, action: IncreaseFontSize }
+        - { key: NumpadSubtract, mods: Control, action: DecreaseFontSize }
+
+        - { key: V, mods: Control|Shift, action: Paste }
+        - { key: C, mods: Control|Shift, action: Copy }
+        - { key: Return,   mods: Shift,   chars: "\x1b[13;2u" }
+        - { key: Return,   mods: Control, chars: "\x1b[13;5u" }
