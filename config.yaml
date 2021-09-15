@@ -27,6 +27,12 @@ dotfiles:
   f_p10k.zsh:
     src: p10k.zsh
     dst: ~/.p10k.zsh
+  f_aliases.zsh:
+    src: oh-my-zsh/custom/aliases.zsh
+    dst: ~/.oh-my-zsh/custom/aliases.zsh
+  f__a5r:
+    src: oh-my-zsh/custom/plugins/a5r/_a5r
+    dst: ~/.oh-my-zsh/custom/plugins/a5r/_a5r
 profiles:
   manjarog:
     dotfiles:
@@ -38,3 +44,5 @@ profiles:
     - f_alacritty.yml
     - f_alacritty.sample.yml
     - f_p10k.zsh
+    - f_aliases.zsh
+    - f__a5r

@@ -1,0 +1,5 @@
+#compdef a5r
+_a5r_completion() {
+  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _A5R_COMPLETE=complete_zsh a5r)
+}
+compdef _a5r_completion a5r
