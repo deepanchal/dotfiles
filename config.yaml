@@ -6,7 +6,11 @@ dotfiles:
   f_bashrc:
     src: bashrc
     dst: ~/.bashrc
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
 profiles:
   manjarog:
     dotfiles:
     - f_bashrc
+    - f_zshrc
