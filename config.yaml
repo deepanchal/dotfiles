@@ -33,6 +33,9 @@ dotfiles:
   f__a5r:
     src: oh-my-zsh/custom/plugins/a5r/_a5r
     dst: ~/.oh-my-zsh/custom/plugins/a5r/_a5r
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
 profiles:
   manjarog:
     dotfiles:
@@ -46,3 +49,4 @@ profiles:
     - f_p10k.zsh
     - f_aliases.zsh
     - f__a5r
+    - f_config
