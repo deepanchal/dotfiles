@@ -42,6 +42,9 @@ dotfiles:
   f_init.vim:
     src: config/nvim/init.vim
     dst: ~/.config/nvim/init.vim
+  f_face:
+    src: face
+    dst: ~/.face
 profiles:
   manjarog:
     dotfiles:
@@ -58,3 +61,4 @@ profiles:
     - f_config
     - f_config.yml
     - f_init.vim
+    - f_face
