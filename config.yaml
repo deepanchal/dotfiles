@@ -24,6 +24,9 @@ dotfiles:
   f_alacritty.sample.yml:
     src: config/alacritty/alacritty.sample.yml
     dst: ~/.config/alacritty/alacritty.sample.yml
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
 profiles:
   manjarog:
     dotfiles:
@@ -34,3 +37,4 @@ profiles:
     - f_gitconfig
     - f_alacritty.yml
     - f_alacritty.sample.yml
+    - f_p10k.zsh
