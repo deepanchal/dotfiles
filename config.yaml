@@ -3,4 +3,10 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
 profiles:
+  manjarog:
+    dotfiles:
+    - f_bashrc
