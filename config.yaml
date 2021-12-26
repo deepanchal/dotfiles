@@ -48,6 +48,9 @@ dotfiles:
   f_aliases:
     src: aliases
     dst: ~/.aliases
+  f_tmux.conf:
+    src: tmux.conf
+    dst: ~/.tmux.conf
 profiles:
   manjarog:
     dotfiles:
@@ -66,3 +69,4 @@ profiles:
     - f_face
     - f_zshenv
     - f_aliases
+    - f_tmux.conf
