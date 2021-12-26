@@ -27,6 +27,9 @@ dotfiles:
   f_p10k.zsh:
     src: p10k.zsh
     dst: ~/.p10k.zsh
+  f_aliases.zsh:
+    src: oh-my-zsh/custom/aliases.zsh
+    dst: ~/.oh-my-zsh/custom/aliases.zsh
 profiles:
   manjarog:
     dotfiles:
@@ -38,3 +41,4 @@ profiles:
     - d_latte
     - d_alacritty
     - f_p10k.zsh
+    - f_aliases.zsh
