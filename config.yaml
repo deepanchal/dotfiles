@@ -18,6 +18,9 @@ dotfiles:
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
+  d_latte:
+    src: config/latte
+    dst: ~/.config/latte
 profiles:
   manjarog:
     dotfiles:
@@ -26,3 +29,4 @@ profiles:
     - f_vimrc
     - f_ideavimrc
     - f_gitconfig
+    - d_latte
