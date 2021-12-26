@@ -42,6 +42,9 @@ dotfiles:
   f_face:
     src: face
     dst: ~/.face
+  f_zshenv:
+    src: zshenv
+    dst: ~/.zshenv
 profiles:
   manjarog:
     dotfiles:
@@ -58,3 +61,4 @@ profiles:
     - d_fusuma
     - d_nvim
     - f_face
+    - f_zshenv
