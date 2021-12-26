@@ -51,6 +51,9 @@ dotfiles:
   f_tmux.conf:
     src: tmux.conf
     dst: ~/.tmux.conf
+  d_kitty:
+    src: config/kitty
+    dst: ~/.config/kitty
 profiles:
   manjarog:
     dotfiles:
@@ -70,3 +73,4 @@ profiles:
     - f_zshenv
     - f_aliases
     - f_tmux.conf
+    - d_kitty
