@@ -36,6 +36,9 @@ dotfiles:
   d_fusuma:
     src: config/fusuma
     dst: ~/.config/fusuma
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
 profiles:
   manjarog:
     dotfiles:
@@ -50,3 +53,4 @@ profiles:
     - f_aliases.zsh
     - d_i3
     - d_fusuma
+    - d_nvim
