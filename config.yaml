@@ -33,6 +33,9 @@ dotfiles:
   d_i3:
     src: config/i3
     dst: ~/.config/i3
+  d_fusuma:
+    src: config/fusuma
+    dst: ~/.config/fusuma
 profiles:
   manjarog:
     dotfiles:
@@ -46,3 +49,4 @@ profiles:
     - f_p10k.zsh
     - f_aliases.zsh
     - d_i3
+    - d_fusuma
