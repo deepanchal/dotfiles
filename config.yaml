@@ -21,6 +21,9 @@ dotfiles:
   d_latte:
     src: config/latte
     dst: ~/.config/latte
+  d_alacritty:
+    src: config/alacritty
+    dst: ~/.config/alacritty
 profiles:
   manjarog:
     dotfiles:
@@ -30,3 +33,4 @@ profiles:
     - f_ideavimrc
     - f_gitconfig
     - d_latte
+    - d_alacritty
