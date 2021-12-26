@@ -24,6 +24,9 @@ dotfiles:
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
+  f_p10k.zsh:
+    src: p10k.zsh
+    dst: ~/.p10k.zsh
 profiles:
   manjarog:
     dotfiles:
@@ -34,3 +37,4 @@ profiles:
     - f_gitconfig
     - d_latte
     - d_alacritty
+    - f_p10k.zsh
