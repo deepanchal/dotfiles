@@ -45,6 +45,9 @@ dotfiles:
   f_zshenv:
     src: zshenv
     dst: ~/.zshenv
+  f_aliases:
+    src: aliases
+    dst: ~/.aliases
 profiles:
   manjarog:
     dotfiles:
@@ -62,3 +65,4 @@ profiles:
     - d_nvim
     - f_face
     - f_zshenv
+    - f_aliases
