@@ -87,6 +87,19 @@ mode "$mode_launcher" {
     bindsym q mode "default"
 }
 
+# Media player controls
+set $media_controller Media: [p]lay [p]ause [n]ext [b]ack
+bindsym $mod+Shift+p mode "$media_controller"
+
+mode "$media_controller" {
+    bindsym $mod+Shift+p exec playerctl play-pause, mode "default"
+    bindsym $mod+Shift+n exec playerctl next, mode "default"
+    bindsym $mod+Shift+b exec playerctl previous, mode "default"
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym q mode "default"
+}
+
 # Kill focused window
 bindsym $mod+Shift+q kill
 
