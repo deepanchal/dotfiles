@@ -27,3 +27,6 @@
     old = red bold
     new = green bold
     whitespace = red reverse
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

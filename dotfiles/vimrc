@@ -71,12 +71,13 @@ endfunction
 " Vim Markdown Composer
 Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
+" Vim LSP
+Plug 'neovim/nvim-lspconfig'
+
 " Initialize plugin system
 call plug#end()
 " Enable Smart Sudo
 let g:suda_smart_edit = 1
-" Set Python Exec
-let g:python3_host_prog = '/home/bradenmars/.pyenv/versions/3.7.3/bin/python'
 " Enable Mouse
 set mouse=a
 " Status bar
@@ -139,7 +140,7 @@ inoremap jk <esc>
 " No Highlight Map
 map <C-n> :nohl<CR>
 " Remap Ctrl+W to Caps Lock (Sway caps lock -> esc)
-nmap <esc> <C-w>
+" nmap <esc> <C-w>
 " Color Scheme
 colorscheme default
 set background=dark
