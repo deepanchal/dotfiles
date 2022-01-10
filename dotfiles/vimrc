@@ -5,96 +5,161 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+" call plug#begin('~/.local/share/nvim/plugged')
 call plug#begin('~/.vim/plugged')
+
 " Make sure you use single quotes
+
+" Sensible defaults.
+Plug 'tpope/vim-sensible'
+
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 Plug 'junegunn/vim-easy-align'
+
 " Vim Easymotion
 Plug 'easymotion/vim-easymotion'
+
+" Ez Tags
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+
+" FuGITive
+" Plug 'tpope/vim-fugitive'
+
+" Abolish
+Plug 'tpope/vim-abolish'
+
+" Surround
+Plug 'tpope/vim-surround'
+
+" Surround
+Plug 'tpope/vim-repeat'
+
 " Any valid git URL is allowed
-Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
 " Sudo Helper
 Plug 'lambdalisue/suda.vim'
+
 " Autocomplete + Snippets
 "Plug 'roxma/nvim-completion-manager' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
 " On-demand loading
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+
 " Nerd Tree
 Plug 'preservim/nerdtree'
+
 " Editorconfig
 Plug 'editorconfig/editorconfig-vim'
+
 " Nerd Commenter
 Plug 'scrooloose/nerdcommenter'
+
 " Vim Shebang
 Plug 'sbdchd/vim-shebang'
+
 " Vim Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " Auto Save
 Plug '907th/vim-auto-save'
+
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 " Syntax Checking
-Plug 'vim-syntastic/syntastic'
+" Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale' 
+
 " Git Gutter
 Plug 'airblade/vim-gitgutter'
+
 " Indent Guides
 Plug 'nathanaelkane/vim-indent-guides'
+
 " Vim Multi Cursor
 " Plug 'terryma/vim-multiple-cursors'
+
 " Vim Denite
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " Vim Taskwarrior
-Plug 'blindfs/vim-taskwarrior'
+" Plug 'blindfs/vim-taskwarrior'
+
 " Vim Tmux Nav
 Plug 'christoomey/vim-tmux-navigator'
+
 " HCL Syntax and Formatting
 Plug 'fatih/vim-hclfmt'
 Plug 'b4b4r07/vim-hcl'
+
 " Vim TOML
 Plug 'cespare/vim-toml'
 
-function! BuildComposer(info)
-  if a:info.status != 'unchanged' || a:info.force
-    if has('nvim')
-      !cargo build --release --locked
-    else
-      !cargo build --release --locked --no-default-features --features json-rpc
-    endif
-  endif
-endfunction
-
 " Vim Markdown Composer
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'euclio/vim-markdown-composer'
 
-" Vim LSP
-Plug 'neovim/nvim-lspconfig'
+" Vim OpenScad
+Plug 'sirtaj/vim-openscad'
+
+" Vim Black
+" Plug 'psf/black', { 'branch': 'stable' }
+Plug 'psf/black'
+
+" Completions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Monokai themes
+Plug 'tanvirtin/monokai.nvim'
+
+" Add color highlighting to common representations (hex/rgba/etc).
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Initialize plugin system
 call plug#end()
+
+" Exec black on save
+" autocmd BufWritePre *.py execute ':Black'
+
 " Enable Smart Sudo
 let g:suda_smart_edit = 1
+
+" Vim Easy Tags Config
+let g:easytags_python_enabled = 1  " faster tagging
+
 " Enable Mouse
 set mouse=a
+
 " Status bar
 set laststatus=2
+
 " Line Numbers
 set number
+
 " Relative Line Numbers
 set relativenumber
+
 " Encoding
 set encoding=utf-8
 set fileencoding=utf-8
+
 " Enable filetype plugin
 filetype plugin on
+
 " Always use System Clipboard
 set clipboard+=unnamedplus
+
+
 " Override paste to strip new lines
 " nmap p :r!/usr/bin/wl-paste -n<CR>
+
 " Highlight matching search patterns
 set hlsearch
 " Enable incremental search
@@ -103,70 +168,137 @@ set incsearch
 set ignorecase
 " Include only uppercase words with uppercase search term
 set smartcase
+
 " vim auto save config
 let g:auto_save = 1 "enable autosave
+let g:auto_save_events = ["CursorHold"]
+
+" vim tmux navigator
+
+
 " Automatically save and load folds
 "autocmd BufWinLeave *.* mkview
 "autocmd BufWinEnter *.* silent loadview"
-" Syntastic ConfigE
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+
+" Syntastic Config
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0
+"let g:syntastic_check_on_wq = 0
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
+" Ale Config
+let g:ale_fixers = {}
+let g:ale_fixers.python = ['black']
+
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'minimalist'
+
 " Prettier
-let g:prettier#autoformat = 1
+let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 1
+
 " Taskwarrior.vim
 let g:task_report_name = 'in'
 let g:taskrc_override = 'rc.defaultwidth=0'
+
 " Git Gutter Config
-set updatetime=100
+" set updatetime=100
+
+" update time for autosave idle, git gutter, other.
+set updatetime=1000
+
 " Set Leader
 let mapleader = " "
+
 " See Leader
 set showcmd
+
 " Quick Delete Line
-nmap <leader>d dd
+" nmap <leader>d dd
+
+" No Highlight Map
+map <C-h> :nohl<CR>
+
 " JK Remap
 inoremap jk <esc>
-" inoremap <esc> <nop>
-" No Highlight Map
-map <C-n> :nohl<CR>
+inoremap <esc> <nop>
+inoremap <C-c> <nop>
+
+" Disable arrow keys in normal mode
+nnoremap <silent> <Left> <nop>
+nnoremap <silent> <Up> <nop>
+nnoremap <silent> <Down> <nop>
+nnoremap <silent> <Right> <nop>
+
+" NERDTree
+nnoremap <leader>TN :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <leader>TT :NERDTreeToggle<CR>
+nnoremap <leader>TF :NERDTreeFind<CR>
+
+
 " Remap Ctrl+W to Caps Lock (Sway caps lock -> esc)
-" nmap <esc> <C-w>
+nmap <esc> <C-w>
+
 " Color Scheme
-colorscheme default
+colorscheme monokai_soda
 set background=dark
+
+" Start NERDTree and put the cursor back in the other window.
+" autocmd VimEnter * NERDTree | wincmd p
+
+" Enable truecolor support
+"     tmux support (see https://github.com/RRethy/vim-hexokinase/issues/10)
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\e[38;2;%lu;%lu;%lum" " sets foreground color (ANSI true-color mode)
+let &t_8b = "\e[48;2;%lu;%lu;%lum" " sets background color (ANSI true-color mode)
+set termguicolors
+
 " Indent Guides
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
+
 " Set indent/tab = 4 spaces + Sane Editing
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType css setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
+
+" View output of shell cmd in a scratch buffer.
+" Usage: R <cmd>
+" Ex: R curl -LSs https://someurl
+command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
+
+
 " Denite Mappings
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
+"autocmd FileType denite call s:denite_my_settings()
+"function! s:denite_my_settings() abort
+  "nnoremap <silent><buffer><expr> <CR>
+  "\ denite#do_map('do_action')
+  "nnoremap <silent><buffer><expr> d
+  "\ denite#do_map('do_action', 'delete')
+  "nnoremap <silent><buffer><expr> p
+  "\ denite#do_map('do_action', 'preview')
+  "nnoremap <silent><buffer><expr> q
+  "\ denite#do_map('quit')
+  "nnoremap <silent><buffer><expr> i
+  "\ denite#do_map('open_filter_buffer')
+  "nnoremap <silent><buffer><expr> <Space>
+  "\ denite#do_map('toggle_select').'j'
+"endfunction
