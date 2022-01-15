@@ -47,7 +47,7 @@ font:
 
 # Cursor Config
 cursor:
-        style: Beam
+        style: Block
 
 # Mouse
 mouse:
