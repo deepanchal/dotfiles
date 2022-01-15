@@ -30,9 +30,6 @@ dotfiles:
   f_aliases.zsh:
     src: oh-my-zsh/custom/aliases.zsh
     dst: ~/.oh-my-zsh/custom/aliases.zsh
-  d_i3:
-    src: config/i3
-    dst: ~/.config/i3
   d_fusuma:
     src: config/fusuma
     dst: ~/.config/fusuma
@@ -54,6 +51,9 @@ dotfiles:
   d_kitty:
     src: config/kitty
     dst: ~/.config/kitty
+  f_config:
+    src: config/i3/config
+    dst: ~/.config/i3/config
 profiles:
   manjarog:
     dotfiles:
@@ -66,7 +66,6 @@ profiles:
     - d_alacritty
     - f_p10k.zsh
     - f_aliases.zsh
-    - d_i3
     - d_fusuma
     - d_nvim
     - f_face
@@ -74,3 +73,4 @@ profiles:
     - f_aliases
     - f_tmux.conf
     - d_kitty
+    - f_config
