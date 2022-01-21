@@ -144,7 +144,7 @@ set laststatus=2
 set number
 
 " Relative Line Numbers
-set relativenumber
+" set relativenumber
 
 " Encoding
 set encoding=utf-8
