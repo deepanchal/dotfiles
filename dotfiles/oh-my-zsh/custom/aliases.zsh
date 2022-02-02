@@ -3,7 +3,7 @@
 # Replacements
 alias vim="nvim"	        # neovim https://github.com/neovim/neovim
 alias cat="bat"                 # batcat https://github.com/sharkdp/bat
-alias ls="colorls --gs"         # colorls https://github.com/athityakumar/colorls
+alias ls="exa --icons --git"         # exa https://github.com/ogham/exa
 
 # Config Aliases
 alias zshcfg="$EDITOR ~ZSH_CUSTOM"
@@ -56,9 +56,18 @@ alias dallow='asdf exec direnv allow'
 alias errors="journalctl -b -p err|less"
 
 # Git
+alias lz="lazygit"
 alias g="git"
 alias gcpcommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /' | xclip -selection clipboard"
 alias glscommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /'"
+
+gls_commits() {
+  git log --no-merges --count HEAD ^$1 --reverse --pretty=format:'- %s'
+}
+
+gcp_commits() {
+  gls_commits $1 | tee >(xclip -selection clipboard)
+}
 
 # Kubernetes
 alias mk='minikube'
