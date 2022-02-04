@@ -354,6 +354,9 @@ mode "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
+# Flameshot
+bindcode 72 exec flameshot gui
+
 # Autostart
 exec --no-startup-id picom -b
 
