@@ -2,7 +2,7 @@
 # for_window [class="^.*"] border pixel 0
 
 # Gaps
-gaps inner 10
+gaps inner 2
 gaps outer 0
 smart_gaps on
 
@@ -354,8 +354,11 @@ mode "$mode_gaps_outer" {
     bindsym Escape mode "default"
 }
 
-# Flameshot
+# Flameshot screenshot
 bindcode 72 exec flameshot gui
+
+# Spectacle screenshot
+bindcode $mod+72 exec spectacle
 
 # Autostart
 exec --no-startup-id picom -b
