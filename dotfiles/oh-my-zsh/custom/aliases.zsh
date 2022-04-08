@@ -24,9 +24,11 @@ alias la="ls -al"
 alias myip="ip addr | grep -m 1 -o '192.*.*.*' | cut -d '/' -f 1"
 alias wanip="curl -s -X GET https://checkip.amazonaws.com"
 
-# Copy/Paste PWD
+# Copy/Paste
 alias cpwd='pwd | xclip'
 alias ppwd='cd $(xclip -o)'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -o'
 
 # Dotdrop Dotfiles
 alias dotdrop="$DOTFILES/dotdrop.sh --cfg=$DOTFILES/config.yaml"
@@ -61,12 +63,30 @@ alias g="git"
 alias gcpcommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /' | xclip -selection clipboard"
 alias glscommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /'"
 
+# list commits from HEAD to given base branch
 gls_commits() {
   git log --no-merges --count HEAD ^$1 --reverse --pretty=format:'- %s'
 }
 
+# copy commits from HEAD to given base branch to clipboard
 gcp_commits() {
   gls_commits $1 | tee >(xclip -selection clipboard)
+}
+
+# update pr description with commits from given base branch
+update_pr_body() {
+  gls_commits $1 | xargs -0 -I _ gh pr edit --body _
+}
+
+# port 
+list-port () {
+	sudo -v
+	sudo lsof -i :$1
+}
+
+kill-port () {
+	sudo -v
+	sudo lsof -t -i tcp:$1 | xargs -I kill
 }
 
 # Kubernetes
