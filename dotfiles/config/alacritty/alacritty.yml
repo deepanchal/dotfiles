@@ -41,7 +41,7 @@ colors:
 
 # Font Configuration
 font:
-        size: 14
+        size: 11
         normal:
                 family: MesloLGM Nerd Font
 
