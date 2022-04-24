@@ -38,7 +38,7 @@ alias zshtime='for i in $(seq 1 10); do /usr/bin/time -f "| Real: %es | User: %U
 
 # Time a command
 timeit() {
-    /usr/bin/time -f "| Real: %es | User: %Us | Sys: %Ss |" $@
+    time -f "| Real: %es | User: %Us | Sys: %Ss |" $@
 }
 
 # Disk Analyzer
