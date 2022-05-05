@@ -1,9 +1,14 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+##: init direnv (see: https://github.com/romkatv/powerlevel10k/blob/master/README.md#how-do-i-initialize-direnv-when-using-instant-prompt)
+. $HOME/.asdf/asdf.sh
+(( ${+commands[direnv]} )) && emulate zsh -c "$(asdf exec direnv export zsh)"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+(( ${+commands[direnv]} )) && emulate zsh -c "$(asdf exec direnv hook zsh)"
+
 
 # Start GNUPG Agent
 # gpg-connect-agent updatestartuptty /bye >/dev/null
@@ -16,7 +21,8 @@ eval $(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)
 source $HOME/.aliases
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/bin:/usr/local/bin:$RUBY_GEMS_PATH:$NPM_GLOBAL_PATH:$PATH
+export CUDA_PATH=/opt/cuda/bin
+export PATH=$HOME/bin:$HOME/.local/bin:/bin:/usr/local/bin:$RUBY_GEMS_PATH:$NPM_GLOBAL_PATH:$CUDA_PATH:$PATH
 
 # Android Studio Env Setup
 export ANDROID_HOME=$HOME/Android/Sdk
@@ -103,7 +109,7 @@ plugins=(
         archlinux            # archlinux completions
         fzf                  # fzf completions
 	yarn			 # yarn completions
-	asdf             # extendable version manager
+	# asdf             # extendable version manager
         tmux             # tmux completions
 	#eksctl           # eksctl completions
 	helm             # helm completions
@@ -132,6 +138,7 @@ plugins=(
 	#taskwarrior        # taskwarrior
 	#timewarrior        # timewarrior aliases / completion
 	systemd		       # systemd aliases
+        heroku
 	urltools		   # provides cmds urlencode/urldecode
 	web-search		   # provides web_search/google cmd
 	fancy-ctrl-z	   # ctrl-z opens/closes vim
@@ -188,7 +195,7 @@ bindkey '^ ' autosuggest-accept
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Hook direnv into your shell.
-eval "$(asdf exec direnv hook zsh)"
+# eval "$(asdf exec direnv hook zsh)"
 
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
@@ -199,3 +206,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
+export PNPM_HOME="/home/deep/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
