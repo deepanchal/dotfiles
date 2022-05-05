@@ -260,9 +260,6 @@ bar {
 # Applications behaving as "pop ups" are set to be always floating
 #  i.e. popup, do stuff, close
 # To get WM_CLASS and WM_TITLE values, on X run "xprop"
-for_window [class="yakuake"] floating enable
-for_window [class="systemsettings"] floating enable
-for_window [class="keepassxc"] floating enable
 
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
@@ -274,8 +271,9 @@ for_window [title="Bureau — Plasma"] kill, floating enable, border none
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
+for_window [class="keepassxc"] floating enable
 for_window [class="yakuake"] floating enable
-for_window [class="systemsettings"] floating enable
+# for_window [class="systemsettings"] floating enable
 for_window [class="plasmashell"] floating enable;
 for_window [class="Plasma"] floating enable; border none
 for_window [title="plasma-desktop"] floating enable; border none
