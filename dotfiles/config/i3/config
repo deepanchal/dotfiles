@@ -77,7 +77,7 @@ mode "$mode_launcher" {
     bindsym b exec brave, mode "default"
     bindsym Shift+b exec brave --force-device-scale-factor=1.5, mode "default"
     bindsym s exec slack, mode "default"
-    bindsym w exec webstorm, mode "default"
+    bindsym w exec DRI_PRIME=1 webstorm, mode "default"
     bindsym p exec charm, mode "default"
     bindsym c exec code, mode "default"
     bindsym d exec dolphin, mode "default"
