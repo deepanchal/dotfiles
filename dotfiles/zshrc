@@ -194,6 +194,9 @@ bindkey '^ ' autosuggest-accept
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Hook zoxide to shell
+eval "$(zoxide init zsh)"
+
 # Hook direnv into your shell.
 # eval "$(asdf exec direnv hook zsh)"
 
