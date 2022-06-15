@@ -66,7 +66,7 @@ bindsym $mod+g exec google-chrome-stable --force-device-scale-factor=1.5
 
 # Press $mod+o followed by either f, t, Escape or Return to launch firefox,
 # thunderbird or return to the default mode, respectively.
-set $mode_launcher Launch: [f]irefox [g]chrome [G]chrome-scaled [b]rave [B]rave-scaled [s]lack [w]ebstorm [p]ycharm [c]ode [d]olphin
+set $mode_launcher Launch: [f]irefox [g]chrome [G]chrome-scaled [b]rave [B]rave-scaled [s]lack [S]potify [w]ebstorm [p]ycharm [c]ode [d]olphin
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
@@ -77,6 +77,7 @@ mode "$mode_launcher" {
     bindsym b exec brave, mode "default"
     bindsym Shift+b exec brave --force-device-scale-factor=1.5, mode "default"
     bindsym s exec slack, mode "default"
+    bindsym S exec spotify, mode "default"
     bindsym w exec DRI_PRIME=1 webstorm, mode "default"
     bindsym p exec charm, mode "default"
     bindsym c exec code, mode "default"
