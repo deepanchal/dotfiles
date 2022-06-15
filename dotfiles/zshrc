@@ -9,12 +9,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 (( ${+commands[direnv]} )) && emulate zsh -c "$(asdf exec direnv hook zsh)"
 
-
 # Start GNUPG Agent
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # Start ssh-agent with keychain
-# keychain id_ed25519 --agents ssh --quiet 
+# keychain id_ed25519 --agents ssh --quiet
 eval $(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)
 
 # Load Aliases
@@ -104,59 +103,59 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	httpie		     # httpie completions
-	adb   		     # adb completions
-        archlinux            # archlinux completions
-        fzf                  # fzf completions
-	yarn			 # yarn completions
-	# asdf             # extendable version manager
-        tmux             # tmux completions
+	httpie    # httpie completions
+	adb       # adb completions
+	archlinux # archlinux completions
+	fzf       # fzf completions
+	yarn      # yarn completions
+	#asdf             # extendable version manager
+	tmux # tmux completions
 	#eksctl           # eksctl completions
-	helm             # helm completions
-	minikube         # minikube completions
+	helm     # helm completions
+	minikube # minikube completions
 	#fd 			     # find replacement
-	aws 			 # aws completions
-	rsync			 # rsync aliases
+	aws   # aws completions
+	rsync # rsync aliases
 	#flutter          # flutter autocompletion
-	python           # python helpers
+	python # python helpers
 	#poetry          # poetry completions
 	#catimg          # cat img to terminal
-	colored-man-pages  # colorize man pages
-	common-aliases     # colorize man pages
-	copybuffer         # binds ctrl-o to copy currently typed cmd
-	docker-compose     # docker-compose aliases
+	colored-man-pages # colorize man pages
+	common-aliases    # colorize man pages
+	copybuffer        # binds ctrl-o to copy currently typed cmd
+	docker-compose    # docker-compose aliases
 	#django             # django aliases
-	autojump		   # 'j' command - smart cd
-	git                # git alias/completions
-	gitfast		       # git... but fast
-	git-extras		   # awesome git scripts
-	gh		           # github cli
-	gpg-agent          # enables gpg agent if not running
+	autojump   # 'j' command - smart cd
+	git        # git alias/completions
+	gitfast    # git... but fast
+	git-extras # awesome git scripts
+	gh         # github cli
+	gpg-agent  # enables gpg agent if not running
 	#evalcache		   # cache 'eval' commands
 	#alias-tips		   # informs you of an alias if one exists
 	#copyzshell		   # copy zsh config over ssh
 	#taskwarrior        # taskwarrior
 	#timewarrior        # timewarrior aliases / completion
-	systemd		       # systemd aliases
-        heroku
-	urltools		   # provides cmds urlencode/urldecode
-	web-search		   # provides web_search/google cmd
-	fancy-ctrl-z	   # ctrl-z opens/closes vim
+	systemd # systemd aliases
+	heroku
+	urltools     # provides cmds urlencode/urldecode
+	web-search   # provides web_search/google cmd
+	fancy-ctrl-z # ctrl-z opens/closes vim
 	#encode64           # encode/decode64 cmds
-	kubectl            # kubctl autocompletion
+	kubectl # kubctl autocompletion
 	#keep              # keep cli completions
-	zsh-interactive-cd         # interactive tab completion for cd
-	zsh-navigation-tools       # history (and more) nav tools
-	zsh-autosuggestions	       # auto suggestions
+	zsh-interactive-cd   # interactive tab completion for cd
+	zsh-navigation-tools # history (and more) nav tools
+	zsh-autosuggestions  # auto suggestions
 	#zsh-vim-mode              # must be loaded after syntax hl
-        a5r                     # adstakr autocompletions
-        pnpm                    # pnpm autocompletions
-	zsh-syntax-highlighting    # !! must be last - syntx hl
+	a5r                     # adstakr autocompletions
+	pnpm                    # pnpm autocompletions
+	zsh-syntax-highlighting # !! must be last - syntx hl
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# Key bind for zsh-autosuggestions 
+# Key bind for zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
 # User configuration
@@ -202,7 +201,6 @@ eval "$(zoxide init zsh)"
 
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
-
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
