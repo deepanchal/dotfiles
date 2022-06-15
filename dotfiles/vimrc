@@ -30,6 +30,10 @@ Plug 'xolox/vim-easytags'
 " FuGITive
 " Plug 'tpope/vim-fugitive'
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " Abolish
 Plug 'tpope/vim-abolish'
 
@@ -284,6 +288,12 @@ autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 " Usage: R <cmd>
 " Ex: R curl -LSs https://someurl
 command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " Denite Mappings
