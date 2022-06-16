@@ -1,0 +1,15 @@
+name: WIP
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  wip:
+    name: 🚧 WIP 🚧
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wip/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
