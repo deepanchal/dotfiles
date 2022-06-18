@@ -45,15 +45,15 @@ dotfiles:
   f_aliases:
     src: aliases
     dst: ~/.aliases
-  f_tmux.conf:
-    src: tmux.conf
-    dst: ~/.tmux.conf
   d_kitty:
     src: config/kitty
     dst: ~/.config/kitty
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
+  f_tmux.conf.local:
+    src: tmux.conf.local
+    dst: ~/.tmux.conf.local
 profiles:
   manjarog:
     dotfiles:
@@ -71,6 +71,6 @@ profiles:
     - f_face
     - f_zshenv
     - f_aliases
-    - f_tmux.conf
     - d_kitty
     - f_config
+    - f_tmux.conf.local
