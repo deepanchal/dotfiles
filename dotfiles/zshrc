@@ -103,54 +103,46 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	httpie    # httpie completions
-	adb       # adb completions
-	archlinux # archlinux completions
-	fzf       # fzf completions
-	yarn      # yarn completions
-	#asdf             # extendable version manager
-	tmux # tmux completions
-	#eksctl           # eksctl completions
-	helm     # helm completions
-	minikube # minikube completions
-	#fd 			     # find replacement
-	aws   # aws completions
-	rsync # rsync aliases
-	#flutter          # flutter autocompletion
-	python # python helpers
-	#poetry          # poetry completions
-	#catimg          # cat img to terminal
-	colored-man-pages # colorize man pages
-	common-aliases    # colorize man pages
-	copybuffer        # binds ctrl-o to copy currently typed cmd
-	docker-compose    # docker-compose aliases
-	#django             # django aliases
-	autojump   # 'j' command - smart cd
-	git        # git alias/completions
-	gitfast    # git... but fast
-	git-extras # awesome git scripts
-	gh         # github cli
-	gpg-agent  # enables gpg agent if not running
-	#evalcache		   # cache 'eval' commands
-	#alias-tips		   # informs you of an alias if one exists
-	#copyzshell		   # copy zsh config over ssh
-	#taskwarrior        # taskwarrior
-	#timewarrior        # timewarrior aliases / completion
-	systemd # systemd aliases
-	heroku
-	urltools     # provides cmds urlencode/urldecode
-	web-search   # provides web_search/google cmd
-	fancy-ctrl-z # ctrl-z opens/closes vim
-	#encode64           # encode/decode64 cmds
-	kubectl # kubctl autocompletion
-	#keep              # keep cli completions
-	zsh-interactive-cd   # interactive tab completion for cd
-	zsh-navigation-tools # history (and more) nav tools
-	zsh-autosuggestions  # auto suggestions
-	#zsh-vim-mode              # must be loaded after syntax hl
-	a5r                     # adstakr autocompletions
-	pnpm                    # pnpm autocompletions
-	zsh-syntax-highlighting # !! must be last - syntx hl
+ #a5r                           # adstakr autocompletions (custom)
+  adb                           # adb completions
+  archlinux                     # archlinux completions / helpers
+  asdf                          # asdf completions
+  autojump                      # 'j' command for smart cd
+  aws                           # aws completions
+  colored-man-pages             # colorize man pages
+  common-aliases                # common-aliases for ls, file-handling, find, etc.
+  copybuffer                    # binds ctrl-o to copy currently typed cmd
+  docker                        # docker aliases
+  docker-compose                # docker-compose aliases
+  fancy-ctrl-z                  # ctrl-z opens/closes vim
+  fzf                           # fzf autocompletions & bindings
+  gh                            # github cli
+  git                           # git alias/completions
+  git-extras                    # awesome git scripts
+  gitfast                       # faster git
+  gpg-agent                     # enables gpg agent if not running
+  helm                          # helm autocompletions
+  heroku                        # heroku autocompletions
+  httpie                        # httpie autocompletions
+  kubectl                       # kubectl completions/aliases
+  minikube                      # minikube completions
+  pnpm                          # pnpm aliases (custom: https://github.com/ntnyq/omz-plugin-pnpm)
+  poetry                        # python poetry autocompletions
+  python                        # python aliases
+  ripgrep                       # ripgrep autocompletions
+  rsync                         # rsync aliases
+  systemd                       # systemd aliases
+  systemadmin                   # aliases/functions to make system admin's life easier
+  taskwarrior                   # taskwarrior autocompletions
+  timewarrior                   # timewarrior completions/aliases (custom: https://github.com/svenXY/timewarrior)
+  tmux                          # tmux completions/aliases
+  urltools                      # urlencode and urldecode strings
+  yarn                          # yarn completions/aliases
+  zoxide                        # initializes zoxide (smart cd with 'z')
+  zsh-autosuggestions           # zsh auto suggestions
+  zsh-interactive-cd            # interactive tab completion for cd
+  zsh-navigation-tools          # set of zsh nav tools (n-history, n-cd, n-kill, n-list)
+  zsh-syntax-highlighting       # zsh syntax highlighting !! must be last
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -193,9 +185,6 @@ bindkey '^ ' autosuggest-accept
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Hook zoxide to shell
-eval "$(zoxide init zsh)"
-
 # Hook direnv into your shell.
 # eval "$(asdf exec direnv hook zsh)"
 
@@ -211,3 +200,4 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PNPM_HOME="/home/deep/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
