@@ -1,0 +1,19 @@
+import:
+  - /home/deep/.config/alacritty/alacritty.yml
+
+# Window
+window:
+      padding:
+              x: 0
+              y: 0
+
+# Font Configuration
+font:
+        size: 9
+        normal:
+                family: MesloLGM Nerd Font
+
+
+# Cursor Config
+cursor:
+        style: Beam
