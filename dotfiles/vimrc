@@ -254,6 +254,10 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <leader>TT :NERDTreeToggle<CR>
 nnoremap <leader>TF :NERDTreeFind<CR>
 
+" Save & Quit file
+nnoremap <leader>w <cmd>w<cr>
+nnoremap <leader>q <cmd>q<cr>
+nnoremap <leader>h <cmd>nohlsearch<cr>
 
 " Remap Ctrl+W to Caps Lock (Sway caps lock -> esc)
 nmap <esc> <C-w>
