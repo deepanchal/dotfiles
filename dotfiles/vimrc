@@ -262,6 +262,14 @@ nnoremap <leader>h <cmd>nohlsearch<cr>
 " Remap Ctrl+W to Caps Lock (Sway caps lock -> esc)
 nmap <esc> <C-w>
 
+" Greatest remap EVER!! 
+" This remap while in visual mode
+" will delete what is currently highlighted and replace it 
+" with what is in the register BUT it will YANK (delete) it 
+" to a VOID register. Meaning I still have what I originally had
+" when I pasted. I don't loose the previous thing I YANKED!
+vnoremap <leader>p "_dP
+
 " Color Scheme
 colorscheme monokai_soda
 set background=dark
