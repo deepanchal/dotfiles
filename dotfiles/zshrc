@@ -126,6 +126,7 @@ plugins=(
   httpie                        # httpie autocompletions
   kubectl                       # kubectl completions/aliases
   minikube                      # minikube completions
+  npm                           # npm aliases
   pnpm                          # pnpm aliases (custom: https://github.com/ntnyq/omz-plugin-pnpm)
   poetry                        # python poetry autocompletions
   python                        # python aliases
