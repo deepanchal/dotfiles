@@ -151,6 +151,12 @@ source $ZSH/oh-my-zsh.sh
 # Key bind for zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 
+# Enable option stacking for docker
+# Example: docker run -it <TAB> doesn't work, because you're stacking the -i and -t options
+# See: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
