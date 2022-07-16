@@ -38,6 +38,7 @@ export ZSH="/home/deep/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # POWERLEVEL10K_MODE='nerdfont-complete'
+# Note: don't set ZSH_THEME if using starship
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZLE_RPROMPT_INDENT=0
 # Set list of themes to pick from when loading at random
@@ -207,4 +208,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PNPM_HOME="/home/deep/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+
+# Init starship. See: https://starship.rs/
+eval "$(starship init zsh)"
 
