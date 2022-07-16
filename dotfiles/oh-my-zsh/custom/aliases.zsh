@@ -25,10 +25,15 @@ alias myip="ip addr | grep -m 1 -o '192.*.*.*' | cut -d '/' -f 1"
 alias wanip="curl -s -X GET https://checkip.amazonaws.com"
 
 # Copy/Paste
+pbcopy() {
+    xclip -selection clipboard 
+}
+pbpaste() {
+    xclip -o
+}
 alias cpwd='pwd | xclip'
-alias ppwd='cd $(xclip -o)'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -o'
+alias ppwd='cd $(pbpaste)'
+alias -g CP='| pbcopy'
 
 # Dotdrop Dotfiles
 alias dotdrop="$DOTFILES/dotdrop.sh --cfg=$DOTFILES/config.yaml"
@@ -55,7 +60,7 @@ alias dallow='asdf exec direnv allow'
 # alias tmux='direnv exec / tmux'
 
 # System Errors
-alias errors="journalctl -b -p err|less"
+alias errors="journalctl -b -p err | less"
 
 # Git
 alias lz="lazygit"
