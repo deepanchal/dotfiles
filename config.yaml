@@ -1,3 +1,16 @@
+actions:
+  install_vimplug: |
+    test -e ~/.vim/autoload/plug.vim || (
+      curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+      nvim +PlugInstall +qall 
+    )
+  install_astronvim: |
+    test -e ~/.config/nvim/init.lua || (
+      mkdir -p ~/.config/nvim
+      git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+      nvim +PackerSync
+    )
 config:
   backup: true
   create: true
@@ -21,6 +34,8 @@ dotfiles:
   d_latte:
     src: config/latte
     dst: ~/.config/latte
+    upignore:
+      - '*.lock'
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -33,9 +48,11 @@ dotfiles:
   d_fusuma:
     src: config/fusuma
     dst: ~/.config/fusuma
-  d_nvim:
-    src: config/nvim
-    dst: ~/.config/nvim
+  d_astronvim_user:
+    src: config/nvim/lua/user
+    dst: ~/.config/nvim/lua/user
+    actions:
+      - install_astronvim 
   f_face:
     src: face
     dst: ~/.face
@@ -67,7 +84,7 @@ profiles:
     - f_p10k.zsh
     - f_aliases.zsh
     - d_fusuma
-    - d_nvim
+    - d_astronvim_user
     - f_face
     - f_zshenv
     - f_aliases
