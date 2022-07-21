@@ -79,7 +79,7 @@ mode "$mode_launcher" {
     bindsym s exec slack, mode "default"
     bindsym Shift+s exec spotify, mode "default"
     bindsym S exec spotify, mode "default"
-    bindsym w exec DRI_PRIME=1 webstorm, mode "default"
+    bindsym w exec DRI_PRIME=1 webstorm-eap, mode "default"
     bindsym p exec charm, mode "default"
     bindsym c exec code, mode "default"
     bindsym d exec dolphin, mode "default"
@@ -89,18 +89,23 @@ mode "$mode_launcher" {
     bindsym q mode "default"
 }
 
-# Media player controls
-set $media_controller Media: [p]lay [p]ause [n]ext [b]ack
-bindsym $mod+Shift+p mode "$media_controller"
+# Media Controls
+bindsym $mod+Shift+M exec playerctl play-pause
+bindsym $mod+Shift+N exec playerctl next
+bindsym $mod+Shift+B exec playerctl previous
 
-mode "$media_controller" {
-    bindsym $mod+Shift+p exec playerctl play-pause, mode "default"
-    bindsym $mod+Shift+n exec playerctl next, mode "default"
-    bindsym $mod+Shift+b exec playerctl previous, mode "default"
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-    bindsym q mode "default"
-}
+# Media player controls
+# set $media_controller Media: [p]lay [p]ause [n]ext [b]ack
+# bindsym $mod+Shift+p mode "$media_controller"
+#
+# mode "$media_controller" {
+#     bindsym $mod+Shift+p exec playerctl play-pause, mode "default"
+#     bindsym $mod+Shift+n exec playerctl next, mode "default"
+#     bindsym $mod+Shift+b exec playerctl previous, mode "default"
+#     bindsym Escape mode "default"
+#     bindsym Return mode "default"
+#     bindsym q mode "default"
+# }
 
 # Kill focused window
 bindsym $mod+Shift+q kill
@@ -200,10 +205,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # Move focus between screens
-bindsym $mod+Alt+h focus output left
-bindsym $mod+Alt+Left focus output left
-bindsym $mod+Alt+l focus output right
-bindsym $mod+Alt+Right focus output right
+# bindsym $mod+Alt+h focus output left
+# bindsym $mod+Alt+Left focus output left
+# bindsym $mod+Alt+l focus output right
+# bindsym $mod+Alt+Right focus output right
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -284,7 +289,7 @@ for_window [class="krunner"] floating enable, border none, move position center
 for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
-for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="(?i).*nextcloud.*"] floating disable
 for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position center
 no_focus [class="plasmashell" window_type="notification"]
 
