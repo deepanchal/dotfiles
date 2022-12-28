@@ -79,8 +79,8 @@ mode "$mode_launcher" {
     bindsym s exec slack, mode "default"
     bindsym Shift+s exec spotify, mode "default"
     bindsym S exec spotify, mode "default"
-    bindsym w exec DRI_PRIME=1 webstorm-eap, mode "default"
-    bindsym p exec charm, mode "default"
+    bindsym w exec DRI_PRIME=1 webstorm, mode "default"
+    bindsym p exec pycharm, mode "default"
     bindsym c exec code, mode "default"
     bindsym d exec dolphin, mode "default"
 
@@ -116,10 +116,12 @@ bindsym $mod+x move workspace to output right
 
 # rofi
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 17" '
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu '
+# bindsym $mod+d exec --no-startup-id rofi
 
 # krunner instead of dmenu
-set $menu --no-startup-id qdbus org.kde.krunner /App display
-bindsym $mod+d exec $menu
+# set $menu --no-startup-id qdbus org.kde.krunner /App display
+# bindsym $mod+d exec $menu
 
 # Screenshot (now provided by Plasma)
 # bindsym Print exec --no-startup-id spectacle
@@ -255,6 +257,7 @@ bindsym $mod+r mode "resize"
 bar {
     verbose yes
     position bottom 
+    mode hide
     # status_command i3blocks
     status_command i3status
     i3bar_command i3bar -t
@@ -263,6 +266,9 @@ bar {
         background $transparent
     }
 }
+
+# polybar
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Applications behaving as "pop ups" are set to be always floating
 #  i.e. popup, do stuff, close
@@ -280,7 +286,7 @@ for_window [window_role="task_dialog"] floating enable
 
 for_window [class="keepassxc"] floating enable
 for_window [class="yakuake"] floating enable
-# for_window [class="systemsettings"] floating enable
+#for_window [class="systemsettings"] floating enable
 for_window [class="plasmashell"] floating enable;
 for_window [class="Plasma"] floating enable; border none
 for_window [title="plasma-desktop"] floating enable; border none
@@ -290,14 +296,14 @@ for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
 for_window [class="(?i).*nextcloud.*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position center
-no_focus [class="plasmashell" window_type="notification"]
+#for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position center
+#no_focus [class="plasmashell" window_type="notification"]
 
 # fix notification appearing on the second monitor
-assign [class="plasmashell" window_type="notification"] output primary 
+#assign [class="plasmashell" window_type="notification"] output primary 
 
-for_window [class="latte-dock"] floating enable, border none
-no_focus [class="latte-dock" window_type="notification"] 
+#for_window [class="latte-dock"] floating enable, border none
+#no_focus [class="latte-dock" window_type="notification"] 
 
 # Kill kde splash screen
 exec pkill "ksplashqml"
@@ -360,7 +366,9 @@ mode "$mode_gaps_outer" {
 }
 
 # Flameshot screenshot
-bindcode 72 exec flameshot gui
+# Needs QT_SCREEN_SCALE_FACTORS="1;1" to work on my external monitor.
+# See: https://github.com/flameshot-org/flameshot/issues/564#issuecomment-1294735519
+bindcode 72 exec "env QT_SCREEN_SCALE_FACTORS='1;1' flameshot gui --last-region"
 
 # Spectacle screenshot
 bindcode $mod+72 exec spectacle

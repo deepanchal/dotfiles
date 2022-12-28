@@ -436,6 +436,20 @@ tmux_conf_copy_to_os_clipboard=false
 # start with mouse mode enabled
 set -g mouse on
 
+# See: https://stackoverflow.com/a/68838778
+# Set default directory for new windows in this session to current directory:
+bind M-c attach-session -c "#{pane_current_path}" \; display-message "default directory set to #{pane_current_path}"
+# Open a new window in the current directory
+bind C new-window -c "#{pane_current_path}" \; display-message "new window opened in #{pane_current_path}"
+# Send the same command to all panes/windows/sessions
+bind E command-prompt -p "Command:" \
+       "run \"tmux list-panes -a -F '##{session_name}:##{window_index}.##{pane_index}' \
+              | xargs -I PANE tmux send-keys -t PANE '%1' Enter\""
+# Send command to all panes in current session
+bind C-e command-prompt -p "Command:" \
+         "run \"tmux list-panes -s -F '##{session_name}:##{window_index}.##{pane_index}' \
+                | xargs -I PANE tmux send-keys -t PANE '%1' Enter\""
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
@@ -503,11 +517,17 @@ set -g @cpu_temp_high_thresh "90" # high temperature threshold
 set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'tmux-plugins/vim-tmux-navigator'
 
 set -g @continuum-save-interval '0'
 set -g @continuum-restore 'on'
+# set -g @continuum-boot 'on'
 
-set -g status-right '#{cpu_bg_color} CPU: #{cpu_icon} #{cpu_percentage} | %a %h-%d %H:%M '
+set-option -sa terminal-overrides ',XXX:RGB'
+
+# 256 Color
+set -g default-terminal "screen-256color"
+set-option -sa terminal-overrides ",alacritty:RGB"
 
 # Direnv support
 ## see: https://github.com/direnv/direnv/wiki/Tmux
