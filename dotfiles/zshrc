@@ -19,20 +19,6 @@ eval $(keychain --eval --quiet id_ed25519 ~/.ssh/id_ed25519)
 # Load Aliases
 source $HOME/.aliases
 
-# If you come from bash you might have to change your $PATH.
-export CUDA_PATH=/opt/cuda/bin
-export PATH=$HOME/bin:$HOME/.local/bin:/bin:/usr/local/bin:$RUBY_GEMS_PATH:$NPM_GLOBAL_PATH:$CUDA_PATH:$PATH
-
-# Android Studio Env Setup
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# Path to your oh-my-zsh installation.
-export ZSH="/home/deep/.oh-my-zsh"
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -199,14 +185,10 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
-export PNPM_HOME="/home/deep/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Init starship. See: https://starship.rs/

@@ -63,7 +63,7 @@ alias dallow='asdf exec direnv allow'
 alias errors="journalctl -b -p err | less"
 
 # Git
-alias lz="lazygit"
+alias lg="lazygit"
 alias g="git"
 alias gcpcommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /' | xclip -selection clipboard"
 alias glscommits="git log --no-merges --count HEAD ^$(git_main_branch) --reverse --pretty=format:%s | sed 's/^/- /'"
