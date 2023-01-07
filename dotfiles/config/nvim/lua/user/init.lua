@@ -283,7 +283,6 @@ local config = {
         "anuvyklack/pretty-fold.nvim",
         config = function() require("pretty-fold").setup() end,
       },
-      { "github/copilot.vim" },
     },
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
@@ -458,6 +457,11 @@ local config = {
       command = "source <afile> | PackerSync",
     })
     vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+      desc = "Open file with unfolded lines as default",
+      pattern = { "*" },
+      command = [[set foldlevel=99]],
+    })
+    vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
       desc = "Set filetype for .envrc",
       pattern = { ".envrc*" },
       command = [[setfiletype sh]],
@@ -494,6 +498,8 @@ local config = {
             "--files",
             "--iglob",
             "!.git",
+            "--iglob",
+            "!node_modules",
             "--no-ignore-vcs"
           },
         }
@@ -513,6 +519,8 @@ local config = {
             "--column",
             "--iglob",
             "!.git",
+            "--iglob",
+            "!node_modules",
             "--no-ignore-vcs"
           },
         }
