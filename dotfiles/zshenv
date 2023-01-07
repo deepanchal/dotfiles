@@ -38,7 +38,7 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.utf8
 
 # XDG Config
-export XDG_CONFIG_HOME=/home/deep/.config
+export XDG_CONFIG_HOME="/home/${USER}/.config"
 
 # Dotfiles
 export DOTFILES="$HOME/dotfiles"
@@ -86,7 +86,7 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export ANDROID_NDK=$ANDROID_HOME/ndk-bundle
 
 # PNPM Global
-export PNPM_HOME="/home/deep/.local/share/pnpm"
+export PNPM_HOME="/home/${USER}/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Scripts
