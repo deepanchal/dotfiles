@@ -87,6 +87,9 @@ dotfiles:
     src: config/gh/config.yml
     dst: ~/.config/gh/config.yml
     chmod: '600'
+  d_scripts:
+    src: scripts
+    dst: ~/scripts
 profiles:
   manjarog:
     dotfiles:
@@ -112,6 +115,7 @@ profiles:
     - f_config.kdl
     - f_config.toml
     - f_gh_config.yml
+    - d_scripts
   octopi:
     dotfiles:
     - f_bashrc
