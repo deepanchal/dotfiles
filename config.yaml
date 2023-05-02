@@ -80,6 +80,9 @@ dotfiles:
   f_config.kdl:
     src: config/zellij/config.kdl
     dst: ~/.config/zellij/config.kdl
+  f_config.toml:
+    src: config/helix/config.toml
+    dst: ~/.config/helix/config.toml
 profiles:
   manjarog:
     dotfiles:
@@ -103,6 +106,7 @@ profiles:
     - f_starship.toml
     - f_config.yml
     - f_config.kdl
+    - f_config.toml
   octopi:
     dotfiles:
     - f_bashrc
