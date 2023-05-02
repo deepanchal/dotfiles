@@ -77,6 +77,9 @@ dotfiles:
   f_config.yml:
     src: config/lazygit/config.yml
     dst: ~/.config/lazygit/config.yml
+  f_config.kdl:
+    src: config/zellij/config.kdl
+    dst: ~/.config/zellij/config.kdl
 profiles:
   manjarog:
     dotfiles:
@@ -99,6 +102,7 @@ profiles:
     - f_tmux.conf.local
     - f_starship.toml
     - f_config.yml
+    - f_config.kdl
   octopi:
     dotfiles:
     - f_bashrc
