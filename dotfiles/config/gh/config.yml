@@ -1,0 +1,58 @@
+# GitHub CLI configuration file
+
+# What protocol to use when performing git operations. Supported values: ssh, https
+git_protocol: ssh
+# What editor gh should run when creating issues, pull requests, etc. If blank, will refer to environment.
+editor: nvim
+# When to interactively prompt. This is a global config that cannot be overridden by hostname. Supported values: enabled, disabled
+prompt: enabled
+# A pager program to send command output to, e.g. "less". Set the value to "cat" to disable the pager.
+pager: delta
+# Aliases allow you to create nicknames for gh commands
+aliases:
+  # Repository related aliases
+  co: repo clone
+  cr: repo create
+  cf: repo fork
+  cv: repo view
+
+  # Issue related aliases
+  ii: issue list
+  ic: issue create
+  iv: issue view
+  icl: issue close
+  ir: issue reopen
+  il: issue label list
+
+  # Pull request related aliases
+  prl: pr list
+  prc: pr create
+  prv: pr view
+  prd: pr diff
+  prr: pr ready
+  prs: pr status
+  prm: pr merge
+  prcl: pr close
+  prch: pr checkout
+
+  # Gist related aliases
+  gl: gist list
+  gc: gist create
+  gv: gist view
+  ge: gist edit
+
+  # Release related aliases
+  rl: release list
+  rc: release create
+  rv: release view
+  rd: release delete
+  rdl: release download
+
+  # Miscellaneous aliases
+  whoami: auth status
+  logout: auth logout
+  login: auth login
+
+# The path to a unix socket through which send HTTP connections. If blank, HTTP traffic will be handled by net/http.DefaultTransport.
+http_unix_socket:
+

@@ -83,6 +83,10 @@ dotfiles:
   f_config.toml:
     src: config/helix/config.toml
     dst: ~/.config/helix/config.toml
+  f_gh_config.yml:
+    src: config/gh/config.yml
+    dst: ~/.config/gh/config.yml
+    chmod: '600'
 profiles:
   manjarog:
     dotfiles:
@@ -107,6 +111,7 @@ profiles:
     - f_config.yml
     - f_config.kdl
     - f_config.toml
+    - f_gh_config.yml
   octopi:
     dotfiles:
     - f_bashrc
