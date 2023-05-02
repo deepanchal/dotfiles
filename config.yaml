@@ -74,6 +74,9 @@ dotfiles:
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
+  f_config.yml:
+    src: config/lazygit/config.yml
+    dst: ~/.config/lazygit/config.yml
 profiles:
   manjarog:
     dotfiles:
@@ -95,6 +98,7 @@ profiles:
     - f_config
     - f_tmux.conf.local
     - f_starship.toml
+    - f_config.yml
   octopi:
     dotfiles:
     - f_bashrc

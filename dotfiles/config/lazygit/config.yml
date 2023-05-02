@@ -1,0 +1,15 @@
+gui:
+  showIcons: true
+customCommands:
+  - key: "C"
+    command: "git cz"
+    context: "files"
+    loadingText: "opening commitizen commit tool"
+    subprocess: true
+git:
+  paging:
+    colorArg: always
+    pager: diff-so-fancy
+    pager: delta --dark --paging=never
+  git:
+    branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
