@@ -35,7 +35,7 @@ dotfiles:
     src: config/latte
     dst: ~/.config/latte
     upignore:
-      - "*.lock"
+    - '*.lock'
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -52,7 +52,7 @@ dotfiles:
     src: config/nvim/lua/user
     dst: ~/.config/nvim/lua/user
     actions:
-      - install_astronvim
+    - install_astronvim
   f_face:
     src: face
     dst: ~/.face
@@ -71,35 +71,39 @@ dotfiles:
   f_tmux.conf.local:
     src: tmux.conf.local
     dst: ~/.tmux.conf.local
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
 profiles:
   manjarog:
     dotfiles:
-      - f_bashrc
-      - f_zshrc
-      - f_vimrc
-      - f_ideavimrc
-      - f_gitconfig
-      - d_latte
-      - d_alacritty
-      - f_p10k.zsh
-      - f_aliases.zsh
-      - d_fusuma
-      - d_astronvim_user
-      - f_face
-      - f_zshenv
-      - f_aliases
-      - d_kitty
-      - f_config
-      - f_tmux.conf.local
+    - f_bashrc
+    - f_zshrc
+    - f_vimrc
+    - f_ideavimrc
+    - f_gitconfig
+    - d_latte
+    - d_alacritty
+    - f_p10k.zsh
+    - f_aliases.zsh
+    - d_fusuma
+    - d_astronvim_user
+    - f_face
+    - f_zshenv
+    - f_aliases
+    - d_kitty
+    - f_config
+    - f_tmux.conf.local
+    - f_starship.toml
   octopi:
     dotfiles:
-      - f_bashrc
-      - f_zshrc
-      - f_vimrc
-      - f_gitconfig
-      - f_p10k.zsh
-      - f_aliases.zsh
-      - d_astronvim_user
-      - f_zshenv
-      - f_aliases
-      - f_tmux.conf.local
+    - f_bashrc
+    - f_zshrc
+    - f_vimrc
+    - f_gitconfig
+    - f_p10k.zsh
+    - f_aliases.zsh
+    - d_astronvim_user
+    - f_zshenv
+    - f_aliases
+    - f_tmux.conf.local
