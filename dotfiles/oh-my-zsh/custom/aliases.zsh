@@ -19,6 +19,7 @@ alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
 # Common Helpers 
 alias ll="ls -l"
 alias la="ls -al"
+alias rg="rg --hidden"
 
 # IP Aliases
 alias myip="ip addr | grep -m 1 -o '192.*.*.*' | cut -d '/' -f 1"
@@ -34,6 +35,7 @@ pbpaste() {
 alias cpwd='pwd | xclip'
 alias ppwd='cd $(pbpaste)'
 alias -g CP='| pbcopy'
+alias -g SG='| sgpt' # for shell gpt
 
 # Dotdrop Dotfiles
 alias dotdrop="$DOTFILES/dotdrop.sh --cfg=$DOTFILES/config.yaml"
@@ -112,4 +114,6 @@ alias adba-start="adba shell am start ${ANDROID_PKG:-$1}/.MainActivity"
 alias adba-rm="adba shell uninstall ${ANDROID_PKG:-$1}"
 alias adba-ls="adb_all shell list packages -3"
 
+# Misc
+alias s='sgpt'
 

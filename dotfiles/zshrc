@@ -27,6 +27,7 @@ source $HOME/.aliases
 # Note: don't set ZSH_THEME if using starship
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZLE_RPROMPT_INDENT=0
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -101,6 +102,7 @@ plugins=(
   copybuffer                    # binds ctrl-o to copy currently typed cmd
   docker                        # docker aliases
   docker-compose                # docker-compose aliases
+  dnote                         # auto-completion for Dnote, a simple command line notebook
   fancy-ctrl-z                  # ctrl-z opens/closes vim
   fzf                           # fzf autocompletions & bindings
   gh                            # github cli
@@ -119,6 +121,7 @@ plugins=(
   python                        # python aliases
   ripgrep                       # ripgrep autocompletions
   rsync                         # rsync aliases
+  rtx                           # rtx (asdf clone) completions
   systemd                       # systemd aliases
   systemadmin                   # aliases/functions to make system admin's life easier
   taskwarrior                   # taskwarrior autocompletions
@@ -182,6 +185,9 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 # Hook direnv into your shell.
 # eval "$(asdf exec direnv hook zsh)"
 
+# Hook rtx (asdf rust clone) to shell
+eval "$(/usr/bin/rtx activate zsh)"
+
 # A shortcut for asdf managed direnv.
 direnv() { asdf exec direnv "$@"; }
 
@@ -192,5 +198,5 @@ direnv() { asdf exec direnv "$@"; }
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Init starship. See: https://starship.rs/
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 

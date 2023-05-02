@@ -38,7 +38,7 @@ export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.utf8
 
 # XDG Config
-export XDG_CONFIG_HOME="/home/${USER}/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Dotfiles
 export DOTFILES="$HOME/dotfiles"
@@ -46,6 +46,9 @@ export DOTFILES_SCRIPTS="$HOME/.scripts"
 
 # Local Binaries
 export PATH="$HOME/.local/bin:$PATH"
+
+# Cargo Binaries
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Ruby Env
 export RUBY_GEMS_PATH="$HOME/.local/share/gem/ruby/3.0.0/bin"
@@ -86,10 +89,14 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export ANDROID_NDK=$ANDROID_HOME/ndk-bundle
 
 # PNPM Global
-export PNPM_HOME="/home/${USER}/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # Scripts
-#export PATH="${PATH}:${HOME}/.scripts"
+export PATH="${PATH}:${HOME}/scripts"
+
+# MISC
+export PROJECTS_DIR="$HOME/projects"
+export GIT_CLIFF_CONFIG="$HOME/projects/cliff.toml"
 
 
