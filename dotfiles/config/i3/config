@@ -258,7 +258,7 @@ bar {
     verbose yes
     position bottom 
     mode hide
-    # status_command i3blocks
+    status_command i3blocks
     status_command i3status
     i3bar_command i3bar -t
     colors {
@@ -268,7 +268,7 @@ bar {
 }
 
 # polybar
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/start.sh
 
 # Applications behaving as "pop ups" are set to be always floating
 #  i.e. popup, do stuff, close
@@ -277,8 +277,9 @@ bar {
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
 exec --no-startup-id wmctrl -c Plasma
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
-for_window [title="Bureau — Plasma"] kill, floating enable, border none
+for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
+# for_window [title="Desktop — Plasma"] kill, floating enable, border none
+# for_window [title="Bureau — Plasma"] kill, floating enable, border none
 
 # Plasma compatibility improvements
 for_window [window_role="pop-up"] floating enable
@@ -296,6 +297,8 @@ for_window [class="Kmix"] floating enable; border none
 for_window [class="Klipper"] floating enable; border none
 for_window [class="Plasmoidviewer"] floating enable; border none
 for_window [class="(?i).*nextcloud.*"] floating disable
+for_window [class="plasmashell" window_type="notification"] border none, move position 70 ppt 81 ppt
+no_focus [class="plasmashell" window_type="notification"]
 #for_window [class="plasmashell" window_type="notification"] floating enable, border none, move position center
 #no_focus [class="plasmashell" window_type="notification"]
 
@@ -307,6 +310,7 @@ for_window [class="(?i).*nextcloud.*"] floating disable
 
 # Kill kde splash screen
 exec pkill "ksplashqml"
+exec pkill "plasmashell"
 
 # Set wallpaper with feh
 exec --no-startup-id feh --bg-fill /home/deep/Pictures/wallpapers/20.jpg
