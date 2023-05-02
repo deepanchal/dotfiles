@@ -9,7 +9,7 @@ local config = {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "nightly", -- "stable" or "nightly"
+    channel = "stable", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -313,14 +313,32 @@ local config = {
     end,
     treesitter = { -- overrides `require("treesitter").setup(...)`
       ensure_installed = {
-        "lua",
+        "bash",
+        "c",
+        "cmake",
         "cpp",
-        "rust",
-        "python",
-        "typescript",
+        "css",
         "dockerfile",
-        "vue",
+        "go",
+        "graphql",
+        "html",
+        "http",
+        "java",
+        "javascript",
+        "jsdoc",
+        "json",
+        "jsonc",
+        "lua",
+        "make",
         "markdown",
+        "python",
+        "regex",
+        "rust",
+        "scss",
+        "tsx",
+        "typescript",
+        "vim",
+        "vue",
         "yaml",
       },
     },
@@ -399,15 +417,11 @@ local config = {
   polish = function()
     local parsers = {
       "bash",
-      "bibtex",
       "c",
       "cmake",
-      "comment",
       "cpp",
       "css",
       "dockerfile",
-      "fennel",
-      "fish",
       "go",
       "graphql",
       "html",
@@ -417,29 +431,18 @@ local config = {
       "jsdoc",
       "json",
       "jsonc",
-      "latex",
       "lua",
       "make",
-      "ninja",
-      "nix",
-      "norg",
-      "org",
-      "perl",
-      "php",
+      "markdown",
       "python",
-      "r",
-      "rasi",
       "regex",
-      "ruby",
       "rust",
       "scss",
       "tsx",
       "typescript",
       "vim",
       "vue",
-      "xml",
       "yaml",
-      "zig",
     }
 
     local unmap = vim.api.nvim_del_keymap
@@ -481,7 +484,7 @@ local config = {
     })
 
     -----------------------------------------------------
-    -- Telescope keymap overrides
+    -- Keymap overrides
     -----------------------------------------------------
     unmap("n", "<leader>ff") -- unmap find files
     unmap("n", "<leader>fw") -- unmap find words
@@ -500,7 +503,7 @@ local config = {
             "!.git",
             "--iglob",
             "!node_modules",
-            "--no-ignore-vcs"
+            "--no-ignore-vcs",
           },
         }
       end,
@@ -521,7 +524,7 @@ local config = {
             "!.git",
             "--iglob",
             "!node_modules",
-            "--no-ignore-vcs"
+            "--no-ignore-vcs",
           },
         }
       end,
