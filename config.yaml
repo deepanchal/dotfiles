@@ -42,9 +42,6 @@ dotfiles:
   f_p10k.zsh:
     src: p10k.zsh
     dst: ~/.p10k.zsh
-  f_aliases.zsh:
-    src: oh-my-zsh/custom/aliases.zsh
-    dst: ~/.oh-my-zsh/custom/aliases.zsh
   d_fusuma:
     src: config/fusuma
     dst: ~/.config/fusuma
@@ -90,6 +87,12 @@ dotfiles:
   d_scripts:
     src: scripts
     dst: ~/scripts
+  d_omz_custom:
+    src: oh-my-zsh/custom
+    dst: ~/.oh-my-zsh/custom
+    upignore:
+      - plugins
+      - themes
 profiles:
   manjarog:
     dotfiles:
@@ -101,7 +104,6 @@ profiles:
       - d_latte
       - d_alacritty
       - f_p10k.zsh
-      - f_aliases.zsh
       - d_fusuma
       - d_astronvim_user
       - f_face
@@ -116,6 +118,7 @@ profiles:
       - f_config.toml
       - f_gh_config.yml
       - d_scripts
+      - d_omz_custom
   octopi:
     dotfiles:
       - f_bashrc
@@ -123,7 +126,6 @@ profiles:
       - f_vimrc
       - f_gitconfig
       - f_p10k.zsh
-      - f_aliases.zsh
       - d_astronvim_user
       - f_zshenv
       - f_aliases
