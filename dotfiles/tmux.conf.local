@@ -553,7 +553,7 @@ set-environment -gu DIRENV_LAYOUT
 # # /!\ do not "uncomment" the functions: the leading "# " characters are needed
 #
 # weather() {
-#   curl -m 1 wttr.in?format=3 2>/dev/null
+#   curl -m 2 wttr.in?format=3 2>/dev/null
 #   sleep 900 # sleep for 15 minutes, throttle network requests whatever the value of status-interval
 # }
 #
