@@ -92,7 +92,7 @@ nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
 nnoremap <leader>c :action CommentByLineComment<CR>
-nnoremap <c-r> :action RecentFiles<CR>
+" nnoremap <c-r> :action RecentFiles<CR>
 nnoremap <leader>l :action RecentLocations<CR>
 nnoremap <leader>hs :action LocalHistory.ShowHistory<CR>
 
