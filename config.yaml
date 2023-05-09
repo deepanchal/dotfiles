@@ -8,8 +8,8 @@ actions:
   install_astronvim: |
     test -e ~/.config/nvim/init.lua || (
       mkdir -p ~/.config/nvim
-      git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-      nvim +PackerSync
+      git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+      nvim
     )
 config:
   backup: true
@@ -35,7 +35,7 @@ dotfiles:
     src: config/latte
     dst: ~/.config/latte
     upignore:
-    - '*.lock'
+      - "*.lock"
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -52,7 +52,7 @@ dotfiles:
     src: config/nvim/lua/user
     dst: ~/.config/nvim/lua/user
     actions:
-    - install_astronvim
+      - install_astronvim
   f_face:
     src: face
     dst: ~/.face
@@ -86,45 +86,45 @@ dotfiles:
   f_gh_config.yml:
     src: config/gh/config.yml
     dst: ~/.config/gh/config.yml
-    chmod: '600'
+    chmod: "600"
   d_scripts:
     src: scripts
     dst: ~/scripts
 profiles:
   manjarog:
     dotfiles:
-    - f_bashrc
-    - f_zshrc
-    - f_vimrc
-    - f_ideavimrc
-    - f_gitconfig
-    - d_latte
-    - d_alacritty
-    - f_p10k.zsh
-    - f_aliases.zsh
-    - d_fusuma
-    - d_astronvim_user
-    - f_face
-    - f_zshenv
-    - f_aliases
-    - d_kitty
-    - f_config
-    - f_tmux.conf.local
-    - f_starship.toml
-    - f_config.yml
-    - f_config.kdl
-    - f_config.toml
-    - f_gh_config.yml
-    - d_scripts
+      - f_bashrc
+      - f_zshrc
+      - f_vimrc
+      - f_ideavimrc
+      - f_gitconfig
+      - d_latte
+      - d_alacritty
+      - f_p10k.zsh
+      - f_aliases.zsh
+      - d_fusuma
+      - d_astronvim_user
+      - f_face
+      - f_zshenv
+      - f_aliases
+      - d_kitty
+      - f_config
+      - f_tmux.conf.local
+      - f_starship.toml
+      - f_config.yml
+      - f_config.kdl
+      - f_config.toml
+      - f_gh_config.yml
+      - d_scripts
   octopi:
     dotfiles:
-    - f_bashrc
-    - f_zshrc
-    - f_vimrc
-    - f_gitconfig
-    - f_p10k.zsh
-    - f_aliases.zsh
-    - d_astronvim_user
-    - f_zshenv
-    - f_aliases
-    - f_tmux.conf.local
+      - f_bashrc
+      - f_zshrc
+      - f_vimrc
+      - f_gitconfig
+      - f_p10k.zsh
+      - f_aliases.zsh
+      - d_astronvim_user
+      - f_zshenv
+      - f_aliases
+      - f_tmux.conf.local
