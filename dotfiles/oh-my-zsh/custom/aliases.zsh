@@ -26,15 +26,12 @@ alias myip="ip addr | grep -m 1 -o '192.*.*.*' | cut -d '/' -f 1"
 alias wanip="curl -s -X GET https://checkip.amazonaws.com"
 
 # Copy/Paste
-pbcopy() {
-    xclip -selection clipboard 
-}
-pbpaste() {
-    xclip -o
-}
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 alias cpwd='pwd | xclip'
 alias ppwd='cd $(pbpaste)'
-alias -g CP='| pbcopy'
+alias -g CP='| pbcopy' # copy to clipboard
+alias -g JQ='| jq' # for jq
 alias -g SG='| sgpt' # for shell gpt
 
 # Dotdrop Dotfiles
@@ -115,5 +112,8 @@ alias adba-rm="adba shell uninstall ${ANDROID_PKG:-$1}"
 alias adba-ls="adb_all shell list packages -3"
 
 # Misc
-alias s='sgpt'
+function s() {
+  # command sgpt "$@" | tee >(xclip -selection clipboard) | bat -l log --no-pager --plain -l markdown
+  command sgpt "$@" | tee >(xclip -selection clipboard) | glow
+}
 
