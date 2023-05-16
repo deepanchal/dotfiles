@@ -10,9 +10,6 @@ return {
   --   end,
   -- },
 
-  { "junegunn/vim-easy-align" },
-  { "tpope/vim-surround" },
-  { "christoomey/vim-tmux-navigator" },
   -- {
   --   "jose-elias-alvarez/typescript.nvim",
   --   after = "mason-lspconfig.nvim",
@@ -22,4 +19,34 @@ return {
   --     }
   --   end,
   -- },
+
+  { "junegunn/vim-easy-align" },
+  { "tpope/vim-surround" },
+  { "christoomey/vim-tmux-navigator" },
+  {
+    "sainnhe/sonokai",
+    init = function() -- init function runs before the plugin is loaded
+      vim.g.sonokai_style = "shusia"
+    end,
+  },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    config = function() require("catppuccin").setup {} end,
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    version = "v0.0.7",
+    -- branch = "0.0.x",
+    config = function()
+      require("github-theme").setup {
+        -- ...
+      }
+    end,
+  },
+  {
+    "IndianBoy42/tree-sitter-just", -- for casey/just
+    event = "BufEnter *justfile,*Justfile",
+    config = function() require("tree-sitter-just").setup {} end,
+  },
 }

@@ -31,5 +31,8 @@ return {
       "vue",
       "yaml",
     })
+
+    -- Automatically install missing parsers when entering buffer
+    opts.auto_install = true
   end,
 }
