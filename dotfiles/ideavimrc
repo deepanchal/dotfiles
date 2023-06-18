@@ -94,6 +94,8 @@ nnoremap <leader>zo :action ExpandAllRegions<CR>
 nnoremap <leader>c :action CommentByLineComment<CR>
 " nnoremap <c-r> :action RecentFiles<CR>
 nnoremap <leader>l :action RecentLocations<CR>
+" open recent projects
+nnoremap <leader>or :action $LRU<CR>
 nnoremap <leader>hs :action LocalHistory.ShowHistory<CR>
 
 nnoremap ge :action GotoNextError<CR>
