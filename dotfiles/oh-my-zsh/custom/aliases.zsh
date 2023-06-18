@@ -77,3 +77,6 @@ kill-port () {
 	sudo lsof -t -i tcp:$1 | xargs -I kill
 }
 
+# Misc
+alias pj='pnpm projen'
+
