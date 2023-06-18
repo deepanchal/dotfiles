@@ -43,6 +43,9 @@ set $darkwhite   #a89984
 set $background  #000000
 set $transparent #00000000
 
+# Alt key as mod
+# set $mod Mod1
+
 # Windows button
 set $mod Mod4
 
@@ -110,9 +113,12 @@ bindsym $mod+Shift+B exec playerctl previous
 # Kill focused window
 bindsym $mod+Shift+q kill
 
-
 # Move workspace to another display
 bindsym $mod+x move workspace to output right
+
+# Scratchpad
+# for_window [class="Alacritty"] move scratchpad, move position 150 150, resize set 1700 800;
+# bindsym Mod4+Shift+f [class="Alacritty"] scratchpad show;
 
 # rofi
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 17" '
