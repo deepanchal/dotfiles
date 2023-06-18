@@ -436,6 +436,10 @@ set -g history-limit 10000
 # start with mouse mode enabled
 set -g mouse on
 
+# Don't scroll to bottom on select
+# See: https://stackoverflow.com/questions/32374907/tmux-mouse-copy-mode-jumps-to-bottom
+unbind -T copy-mode-vi MouseDragEnd1Pane
+
 # See: https://stackoverflow.com/a/68838778
 # Set default directory for new windows in this session to current directory:
 bind M-c attach-session -c "#{pane_current_path}" \; display-message "default directory set to #{pane_current_path}"
@@ -518,6 +522,7 @@ set -g @plugin 'tmux-plugins/tmux-cpu'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-yank'
 
 set -g @continuum-save-interval '0'
 set -g @continuum-restore 'on'
