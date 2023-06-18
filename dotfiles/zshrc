@@ -95,7 +95,6 @@ plugins=(
   adb                           # adb completions
   archlinux                     # archlinux completions / helpers
   asdf                          # asdf completions
-  autojump                      # 'j' command for smart cd
   aws                           # aws completions
   colored-man-pages             # colorize man pages
   common-aliases                # common-aliases for ls, file-handling, find, etc.
@@ -118,6 +117,8 @@ plugins=(
   npm                           # npm aliases
   pnpm                          # pnpm aliases (custom: https://github.com/ntnyq/omz-plugin-pnpm)
   poetry                        # python poetry autocompletions
+  projen                        # projen autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/projen && projen completion > $ZSH_CUSTOM/plugins/projen/_projen)
+  procs                         # procs autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/procs && procs --gen-completion-out zsh > $ZSH_CUSTOM/plugins/procs/_procs)
   python                        # python aliases
   ripgrep                       # ripgrep autocompletions
   rsync                         # rsync aliases
