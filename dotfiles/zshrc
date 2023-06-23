@@ -190,13 +190,13 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 eval "$(/usr/bin/rtx activate zsh)"
 
 # A shortcut for asdf managed direnv.
-direnv() { asdf exec direnv "$@"; }
+direnv() { rtx exec direnv@latest "$@"; }
 
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
-source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+# source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Init starship. See: https://starship.rs/
 # eval "$(starship init zsh)"
