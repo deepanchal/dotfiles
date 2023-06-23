@@ -37,6 +37,9 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.utf8
 
+# ZSH Config Vars
+export ZSH_TMUX_CONFIG="$XDG_CONFIG_HOME/tmux/tmux.conf"
+
 # XDG Config
 export XDG_CONFIG_HOME="$HOME/.config"
 
