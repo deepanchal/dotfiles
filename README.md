@@ -7,18 +7,18 @@ My current system config files.
 ██████████████████  ████████   -------------
 ██████████████████  ████████   OS: Manjaro Linux x86_64
 ██████████████████  ████████   Host: ROG Zephyrus G15 GA503QR_GA503QR 1.0
-████████            ████████   Kernel: 5.15.7-1-MANJARO
-████████  ████████  ████████   Uptime: 2 hours, 30 mins
-████████  ████████  ████████   Packages: 1675 (pacman)
-████████  ████████  ████████   Shell: zsh 5.8
-████████  ████████  ████████   Resolution: 2560x1440
-████████  ████████  ████████   DE: Plasma 5.23.4
+████████            ████████   Kernel: 6.2.16-2-MANJARO
+████████  ████████  ████████   Uptime: 4 hours, 46 mins
+████████  ████████  ████████   Packages: 2348 (pacman)
+████████  ████████  ████████   Shell: zsh 5.9
+████████  ████████  ████████   Resolution: 2560x1440, 2560x1440
+████████  ████████  ████████   DE: Plasma 5.27.5
 ████████  ████████  ████████   WM: i3
-████████  ████████  ████████   Theme: Dracula [Plasma], Breath [GTK2]
-████████  ████████  ████████   Icons: Flatery-Teal-Dark [Plasma], Flatery-Teal-Dark [GTK
-████████  ████████  ████████   Terminal: alacritty
-                               Terminal Font: MesloLGM Nerd Font
-                               CPU: AMD Ryzen 9 5900HS with Radeon Graphics (16) @ 3.300
-                               GPU: AMD ATI 06:00.0 Cezanne
-                               Memory: 4874MiB / 39584MiB
+████████  ████████  ████████   Theme: Dracula [Plasma]
+████████  ████████  ████████   Icons: Papirus [Plasma], Papirus [GTK2/3]
+████████  ████████  ████████   Terminal: tmux
+                               CPU: AMD Ryzen 9 5900HS with Radeon Graphics (16) @ 3.595GHz
+                               GPU: NVIDIA GeForce RTX 3070 Mobile / Max-Q
+                               GPU: AMD ATI Radeon Vega Series / Radeon Vega Mobile Series
+                               Memory: 15569MiB / 39514MiB
 ```
