@@ -17,6 +17,7 @@ return {
         "dockerls",                        -- docker
         "docker_compose_language_service", -- docker compose
         "eslint",                          -- eslint
+        -- "eslint_d",                          -- eslint_d
         "gopls",                           -- go lang
         "html",                            -- html
         "jsonls",                          -- json
@@ -43,7 +44,8 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        "prettier",
+        -- "prettier",
+        -- "prettierd",
         "black",
         "stylua",
       })

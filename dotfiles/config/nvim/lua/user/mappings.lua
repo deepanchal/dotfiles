@@ -22,6 +22,12 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    ["<C-d>"] = { "<C-d>zz", desc = "PgDown Centered" },
+    ["<C-u>"] = { "<C-u>zz", desc = "PgUp Centered" },
+    -- n = { "nzzzv", desc = "Next highlighted centered" },
+    -- N = { "Nzzzv", desc = "Prev highlighted centered" },
+    J = { "mzJ`z", desc = "Join Line w/ cursor at start" },
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -29,6 +35,52 @@ return {
     H = {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
+    },
+    ["<leader>d"] = {
+      [["_d]],
+      desc = "Delete to void register"
+    },
+    ["<leader>y"] = {
+      [["+y]],
+      desc = ""
+    },
+    ["<leader>Y"] = {
+      [["+Y]],
+      desc = ""
+    },
+    ["<leader>s"] = {
+      [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+      desc = "Find & Replace current word"
+    },
+  },
+  v = {
+    J = {
+      ":m '<-2<CR>gv=gv",
+      desc = "Move selection down"
+    },
+    K = {
+      ":m '>+1<CR>gv=gv",
+      desc = "Move selection up"
+    },
+    ["<leader>d"] = {
+      [["_d]],
+      desc = "Delete to void register"
+    },
+    ["<leader>y"] = {
+      [["+y]],
+      desc = ""
+    },
+  },
+  x = {
+    -- Greatest remap EVER!! 
+    -- Let me explain, this remap while in visual mode
+    -- will delete what is currently highlighted and replace it 
+    -- with what is in the register BUT it will YANK (delete) it 
+    -- to a VOID register. Meaning I still have what I originally had
+    -- when I pasted. I don't loose the previous thing I YANKED!
+    ["<leader>p"] = {
+      [["_dP]],
+      desc = "Yank & delete highlighted"
     },
   },
   t = {

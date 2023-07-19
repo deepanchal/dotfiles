@@ -1,16 +1,16 @@
 return {
   -- Configure AstroNvim updates
   updater = {
-    remote = "origin",     -- remote to use
-    channel = "stable",    -- "stable" or "nightly"
-    version = "latest",    -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
-    branch = "nightly",    -- branch name (NIGHTLY ONLY)
-    commit = nil,          -- commit hash (NIGHTLY ONLY)
-    pin_plugins = nil,     -- nil, true, false (nil will pin plugins on stable only)
-    skip_prompts = false,  -- skip prompts about breaking changes
+    remote = "origin", -- remote to use
+    channel = "stable", -- "stable" or "nightly"
+    version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
+    branch = "nightly", -- branch name (NIGHTLY ONLY)
+    commit = nil, -- commit hash (NIGHTLY ONLY)
+    pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
+    skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
-    auto_quit = false,     -- automatically quit the current session after a successful update
-    remotes = {            -- easily add new remotes to track
+    auto_quit = false, -- automatically quit the current session after a successful update
+    remotes = { -- easily add new remotes to track
       --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
       --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
@@ -18,7 +18,7 @@ return {
   },
 
   -- Set colorscheme to use
-  -- options: astrodark | catppuccin | sonokai | github
+  -- options: astrodark | catppuccin | sonokai | github_dark | gruvbox | tokyonight
   colorscheme = "catppuccin",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -32,7 +32,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = false,    -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -73,6 +73,11 @@ return {
     local unmap = vim.api.nvim_del_keymap
     local map = vim.keymap.set
 
+    -- Set transparent background
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "none" })
+
     -- Set key bindings
     vim.keymap.set("n", "<C-s>", ":w!<CR>")
     -- write w/o autocmds (mainly to prevent null-ls from autoformatting)
@@ -98,6 +103,10 @@ return {
             "!.git",
             "--iglob",
             "!node_modules",
+            "--iglob",
+            "!dist",
+            "--iglob",
+            "!coverage",
             "--no-ignore-vcs",
           },
         }
@@ -119,6 +128,10 @@ return {
             "!.git",
             "--iglob",
             "!node_modules",
+            "--iglob",
+            "!dist",
+            "--iglob",
+            "!coverage",
             "--no-ignore-vcs",
           },
         }
@@ -141,5 +154,28 @@ return {
         [".zsh*"] = "sh",
       },
     }
+
+    -- See: https://www.reddit.com/r/vim/comments/139fn2b/plugin_paste_markdown_link_with_title/
+    function InsertMarkdownURL()
+      local url = vim.fn.getreg "+"
+      if url == "" then return end
+      local cmd = "curl -L " .. vim.fn.shellescape(url) .. " 2>/dev/null"
+      local handle = io.popen(cmd)
+      if not handle then return end
+      local html = handle:read "*a"
+      handle:close()
+      local title = ""
+      local pattern = "<title>(.-)</title>"
+      local m = string.match(html, pattern)
+      if m then title = m end
+      if title ~= "" then
+        local markdownLink = "[" .. title .. "](" .. url .. ")"
+        vim.api.nvim_command("call append(line('.'), '" .. markdownLink .. "')")
+      else
+        print "Title not found for link"
+      end
+    end
+
+    vim.api.nvim_set_keymap("n", "<leader>mdp", ":lua InsertMarkdownURL()<CR>", { silent = true, noremap = true })
   end,
 }
