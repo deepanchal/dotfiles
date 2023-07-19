@@ -1,3 +1,23 @@
+import:
+  # uncomment the flavour you want below:
+  # - ~/.config/alacritty/themes/monokai-soda.yml
+  # - ~/.config/alacritty/themes/gruvbox-material.yml
+  # - ~/.config/alacritty/themes/gruvbox.yml
+  # - ~/.config/alacritty/themes/catppuccin.yml
+  - ~/.config/alacritty/themes/catppuccin-mocha.yml
+  # - ~/.config/alacritty/themes/tokyo-night.yml
+  # - ~/.config/alacritty/themes/schemes.yml
+
+# env:
+  # TERM env customization.
+  #
+  # If this property is not set, alacritty will set it to xterm-256color.
+  #
+  # Note that some xterm terminfo databases don't declare support for italics.
+  # You can verify this by checking for the presence of `smso` and `sitm` in
+  # `infocmp xterm-256color`.
+  # TERM: xterm-256color
+
 # Window
 window:
   dimensions:
@@ -5,39 +25,15 @@ window:
     lines: 25
 
   padding:
-    x: 2
-    y: 2
+    x: 0
+    y: 0
 
-  opacity: 0.95
-
-# Colors (Monokai Soda)
-colors:
-  # Default colors
-  primary:
-    background: "0x1a1a1a"
-    foreground: "0xc4c5b5"
-
-  # Normal colors
-  normal:
-    black: "0x1a1a1a"
-    red: "0xf4005f"
-    green: "0x98e024"
-    yellow: "0xfa8419"
-    blue: "0x9d65ff"
-    magenta: "0xf4005f"
-    cyan: "0x58d1eb"
-    white: "0xc4c5b5"
-
-  # Bright colors
-  bright:
-    black: "0x625e4c"
-    red: "0xf4005f"
-    green: "0x98e024"
-    yellow: "0xe0d561"
-    blue: "0x9d65ff"
-    magenta: "0xf4005f"
-    cyan: "0x58d1eb"
-    white: "0xf6f6ef"
+  dynamic_padding: true
+  # decorations: none
+  opacity: 0.9
+  
+# When true, bold text is drawn using the bright variant of colors.
+draw_bold_text_with_bright_colors: true
 
 # Font Configuration
 font:
@@ -46,6 +42,7 @@ font:
   draw_bold_text_with_bright_colors: true
   normal:
     family: FiraCode Nerd Font
+    # family: JetBrainsMono Nerd Font
     # family: Hack Nerd Font
     # family: MesloLGS Nerd Font
     # family: MesloLGSDZ Nerd Font
