@@ -99,6 +99,7 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="${PATH}:${HOME}/scripts"
 
 # MISC
+export WALLPAPER="$HOME/Pictures/wallpapers/21.jpeg"
 export PROJECTS_DIR="$HOME/projects"
 export GIT_CLIFF_CONFIG="$HOME/projects/cliff.toml"
 
