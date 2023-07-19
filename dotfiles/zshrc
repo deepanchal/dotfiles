@@ -118,7 +118,6 @@ plugins=(
   pnpm                          # pnpm aliases (custom: https://github.com/ntnyq/omz-plugin-pnpm)
   poetry                        # python poetry autocompletions
   projen                        # projen autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/projen && projen completion > $ZSH_CUSTOM/plugins/projen/_projen)
-  procs                         # procs autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/procs && procs --gen-completion-out zsh > $ZSH_CUSTOM/plugins/procs/_procs)
   python                        # python aliases
   ripgrep                       # ripgrep autocompletions
   rsync                         # rsync aliases
@@ -134,7 +133,8 @@ plugins=(
   zsh-autosuggestions           # zsh auto suggestions
   zsh-interactive-cd            # interactive tab completion for cd
   zsh-navigation-tools          # set of zsh nav tools (n-history, n-cd, n-kill, n-list)
-  zsh-syntax-highlighting       # zsh syntax highlighting !! must be last
+  # zsh-syntax-highlighting       # zsh syntax highlighting !! must be last
+  fast-syntax-highlighting      # https://github.com/zdharma-continuum/fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -199,5 +199,11 @@ direnv() { rtx exec direnv@latest "$@"; }
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
 
 # Init starship. See: https://starship.rs/
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
+
+# Init procs. See: https://github.com/dalance/procs
+source <(procs --gen-completion-out bash)
+
+# Init Atuin. See: https://github.com/ellie/atuin
+eval "$(atuin init zsh)"
 
