@@ -1,7 +1,9 @@
-theme = "gruvbox_dark_hard"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
+cursorline = true
+color-modes = true
 mouse = false
 
 [editor.cursor-shape]
@@ -24,3 +26,6 @@ separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.indent-guides]
+render = true
