@@ -79,4 +79,4 @@ kill-port () {
 
 # Misc
 alias pj='pnpm projen'
-
+alias rin='rtx install -v'
