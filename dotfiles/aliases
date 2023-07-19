@@ -10,7 +10,7 @@ alias activateTouchscreen="xinput enable 10"
 alias valgrindTest="valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes "
 alias diskspace="du -sh * | sort -hr | head -n20"
 alias vim="nvim"
-alias python="python3"
+#alias python="python3"
 
 # Retrieved from https://opensource.com/article/18/9/handy-bash-aliases
 alias www='python -m SimpleHTTPServer 8000'
