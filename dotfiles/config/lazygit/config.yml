@@ -54,6 +54,6 @@ git:
   paging:
     colorArg: always
     # pager: diff-so-fancy
-    pager: delta --dark --paging=never
+    pager: delta --dark --paging=never --tabs 2
   git:
     branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --"
