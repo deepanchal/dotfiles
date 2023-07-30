@@ -35,7 +35,7 @@ dotfiles:
     src: config/latte
     dst: ~/.config/latte
     upignore:
-      - "*.lock"
+      - '*.lock'
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -83,7 +83,7 @@ dotfiles:
   f_gh_config.yml:
     src: config/gh/config.yml
     dst: ~/.config/gh/config.yml
-    chmod: "600"
+    chmod: '600'
   d_scripts:
     src: scripts
     dst: ~/scripts
@@ -93,6 +93,9 @@ dotfiles:
     upignore:
       - plugins
       - themes
+  f_tool-versions:
+    src: tool-versions
+    dst: ~/.tool-versions
 profiles:
   manjarog:
     dotfiles:
@@ -119,6 +122,7 @@ profiles:
       - f_gh_config.yml
       - d_scripts
       - d_omz_custom
+      - f_tool-versions
   octopi:
     dotfiles:
       - f_bashrc
