@@ -16,8 +16,8 @@ return {
         "cssls",                           -- css
         "dockerls",                        -- docker
         "docker_compose_language_service", -- docker compose
-        "eslint",                          -- eslint
-        -- "eslint_d",                          -- eslint_d
+        -- "eslint",                          -- eslint
+        -- "eslint_d",                        -- eslint_d
         "gopls",                           -- go lang
         "html",                            -- html
         "jsonls",                          -- json

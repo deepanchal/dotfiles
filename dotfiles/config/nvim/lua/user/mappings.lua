@@ -38,49 +38,69 @@ return {
     },
     ["<leader>d"] = {
       [["_d]],
-      desc = "Delete to void register"
+      desc = "Delete to void register",
     },
     ["<leader>y"] = {
       [["+y]],
-      desc = ""
+      desc = "",
     },
     ["<leader>Y"] = {
       [["+Y]],
-      desc = ""
+      desc = "",
     },
     ["<leader>s"] = {
       [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-      desc = "Find & Replace current word"
+      desc = "Find & Replace current word",
+    },
+    -- Prettier
+    ["<leader>lpf"] = {
+      ":!prettierd --loglevel silent --write %<cr>",
+      desc = "Format current file with Prettier",
+    },
+    -- Eslint
+    ["<leader>lef"] = {
+      ":!eslint_d --quiet --fix %<cr>",
+      desc = "Fix ESLint errors in current file",
     },
   },
   v = {
     J = {
       ":m '<-2<CR>gv=gv",
-      desc = "Move selection down"
+      desc = "Move selection down",
     },
     K = {
       ":m '>+1<CR>gv=gv",
-      desc = "Move selection up"
+      desc = "Move selection up",
     },
     ["<leader>d"] = {
       [["_d]],
-      desc = "Delete to void register"
+      desc = "Delete to void register",
     },
     ["<leader>y"] = {
       [["+y]],
-      desc = ""
+      desc = "",
+    },
+    -- Prettier
+    ["<leader>lpf"] = {
+      ":!prettierd %<cr>",
+      desc = "Format current selection with Prettier",
+    },
+    -- Eslint
+    ["<leader>lef"] = {
+      ":!eslint_d --quiet --fix %<cr>",
+      desc = "Fix ESLint errors in current file",
     },
   },
   x = {
-    -- Greatest remap EVER!! 
+    -- Greatest remap EVER!!
     -- Let me explain, this remap while in visual mode
-    -- will delete what is currently highlighted and replace it 
-    -- with what is in the register BUT it will YANK (delete) it 
+    -- will delete what is currently highlighted and replace it
+    -- with what is in the register BUT it will YANK (delete) it
     -- to a VOID register. Meaning I still have what I originally had
     -- when I pasted. I don't loose the previous thing I YANKED!
-    ["<leader>p"] = {
+    ["p"] = {
       [["_dP]],
-      desc = "Yank & delete highlighted"
+      desc = "Yank & delete highlighted",
     },
   },
   t = {

@@ -172,10 +172,10 @@ return {
         local markdownLink = "[" .. title .. "](" .. url .. ")"
         vim.api.nvim_command("call append(line('.'), '" .. markdownLink .. "')")
       else
-        print "Title not found for link"
+        print("Title not found for link")
       end
     end
-
+    
     vim.api.nvim_set_keymap("n", "<leader>mdp", ":lua InsertMarkdownURL()<CR>", { silent = true, noremap = true })
   end,
 }
