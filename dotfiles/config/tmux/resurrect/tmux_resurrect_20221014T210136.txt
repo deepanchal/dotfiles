@@ -1,0 +1,75 @@
+pane	big3d	1	1	:##*	1	manjarog	:/home/deep/projects/work/Big3D	0	zsh	:
+pane	big3d	1	1	:##*	2	manjarog	:/home/deep/projects/work/Big3D	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	big3d	2	0	:##	1	manjarog	:/home/deep/projects/work/Big3D	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	1	1	:##*	1	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	1	1	:##*	2	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	2	0	:##	1	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	3	0	:##	1	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	4	0	:##	1	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	ccu	4	0	:##	2	manjarog	:/home/deep/projects/work/crisiscleanup-3-web	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	finger-smashers	1	1	:##*	1	manjarog	:/home/deep/projects/work/arroyodev/finger-smashers	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	finger-smashers	1	1	:##*	2	manjarog	:/home/deep/projects/work/arroyodev/finger-smashers	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	finger-smashers	2	0	:##	1	manjarog	:/home/deep/projects/work/arroyodev/finger-smashers	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	mdr	1	1	:##*	1	manjarog	:/home/deep/projects/work/mdr/mdr-tap	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	mdr	1	1	:##*	2	manjarog	:/home/deep/projects/work/mdr/mdr-tap	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	mdr	2	0	:##	1	manjarog	:/home/deep/projects/work/mdr/mdr-tap	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	mdr	3	0	:##	1	manjarog	:/home/deep/projects/work/mdr/mdr-tap	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	misc	1	1	:##*	1	manjarog	:/home/deep/projects/work/arroyodev/docs	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	misc	1	1	:##*	2	manjarog	:/home/deep/projects/work/arroyodev/docs	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	misc	2	0	:##	1	manjarog	:/home/deep/projects/work/arroyodev/docs	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	1	1	:##*	1	manjarog	:/home/deep/projects/work/pdanalytics	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	1	1	:##*	2	manjarog	:/home/deep/projects/work/pdanalytics	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	1	1	:##*	3	manjarog	:/home/deep/projects/work/pdanalytics	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	1	1	:##*	4	manjarog	:/home/deep/projects/work/pdanalytics	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	1	1	:##*	5	manjarog	:/home/deep/projects/work/pdanalytics	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	2	0	:##	1	manjarog	:/home/deep/projects/work/pdanalytics	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	3	0	:##	1	manjarog	:/home/deep/projects/work/pdanalytics	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	3	0	:##	2	manjarog	:/home/deep/projects/work/pdanalytics	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	pda	4	0	:##	1	manjarog	:/home/deep/projects/work/pdanalytics	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	personal	1	1	:##*	1	manjarog	:/home/deep/projects/personal/dsa	0	zsh	:
+pane	personal	1	1	:##*	2	manjarog	:/home/deep/projects/personal/dsa	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	personal	1	1	:##*	3	manjarog	:/home/deep/projects/personal/dsa	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	personal	2	0	:##	1	manjarog	:/home/deep/projects/personal/dsa	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	personal	3	0	:##	1	manjarog	:/home/deep/projects/personal/dsa	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	personal	3	0	:##	2	manjarog	:/home/deep/projects/personal/dsa	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	1	1	:##*	1	manjarog	:/home/deep	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	1	1	:##*	2	manjarog	:/home/deep	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	1	1	:##*	3	manjarog	:/home/deep	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	2	0	:##	1	manjarog	:/home/deep	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	3	0	:##	1	manjarog	:/home/deep	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	school	3	0	:##	2	manjarog	:/home/deep	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	1	1	:##*	1	manjarog	:/home/deep/projects/work/stm/tom	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	1	1	:##*	2	manjarog	:/home/deep/projects/work/stm/tom	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	1	1	:##*	3	manjarog	:/home/deep/projects/work/stm/tom	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	2	0	:##	1	manjarog	:/home/deep/projects/work/stm/tom	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	3	0	:##	1	manjarog	:/home/deep/projects/work/stm/tom	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	4	0	:##	1	manjarog	:/home/deep/projects/work/stm/tom	0	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+pane	work	4	0	:##	2	manjarog	:/home/deep/projects/work/stm/tom	1	zsh	:/bin/sh /usr/bin/keychain --eval --quiet id_ed25519 /home/deep/.ssh/id_ed25519
+window	big3d	1	:zsh	1	:##*	9147,232x54,0,0{116x54,0,0,1,115x54,117,0,2}	:
+window	big3d	2	:zsh	0	:##	be60,232x54,0,0,3	:
+window	ccu	1	:zsh	1	:##*	114c,232x54,0,0{116x54,0,0,4,115x54,117,0,5}	:
+window	ccu	2	:zsh	0	:##	be63,232x54,0,0,6	:
+window	ccu	3	:zsh	0	:##	be64,232x54,0,0,7	:
+window	ccu	4	:zsh	0	:##	1152,232x54,0,0{116x54,0,0,8,115x54,117,0,9}	:
+window	finger-smashers	1	:zsh	1	:##*	e678,232x54,0,0{116x54,0,0,10,115x54,117,0,11}	:
+window	finger-smashers	2	:zsh	0	:##	5f61,232x54,0,0,12	:
+window	mdr	1	:zsh	1	:##*	e67b,232x54,0,0{116x54,0,0,13,115x54,117,0,14}	:
+window	mdr	2	:zsh	0	:##	5f64,232x54,0,0,15	:
+window	mdr	3	:zsh	0	:##	5f65,232x54,0,0,16	:
+window	misc	1	:main	1	:##*	e67f,232x54,0,0{116x54,0,0,17,115x54,117,0,18}	off
+window	misc	2	:zsh	0	:##	5f68,232x54,0,0,19	:
+window	pda	1	:zsh	1	:##*	41de,232x54,0,0{56x54,0,0[56x42,0,0,20,56x11,0,43,21],175x54,57,0[175x32,57,0{82x32,57,0,22,92x32,140,0,23},175x21,57,33,24]}	:
+window	pda	2	:zsh	0	:##	df64,232x54,0,0,25	:
+window	pda	3	:zsh	0	:##	667f,232x54,0,0{116x54,0,0,26,115x54,117,0,27}	:
+window	pda	4	:zsh	0	:##	df67,232x54,0,0,28	:
+window	personal	1	:main	1	:##*	c635,232x54,0,0{116x54,0,0,29,115x54,117,0[115x27,117,0,30,115x26,117,28,31]}	off
+window	personal	2	:lazygit	0	:##	5f62,232x54,0,0,32	off
+window	personal	3	:zsh	0	:##	e67c,232x54,0,0{116x54,0,0,33,115x54,117,0,34}	:
+window	school	1	:main	1	:##*	8634,232x54,0,0{116x54,0,0,35,115x54,117,0[115x27,117,0,36,115x26,117,28,37]}	off
+window	school	2	:lazygit	0	:##	5f68,232x54,0,0,38	off
+window	school	3	:zsh	0	:##	267e,232x54,0,0{116x54,0,0,39,115x54,117,0,40}	:
+window	work	1	:server	1	:##*	8fab,232x54,0,0{113x54,0,0,41,118x54,114,0[118x26,114,0,42,118x27,114,27,43]}	off
+window	work	2	:lazygit	0	:##	df64,232x54,0,0,44	off
+window	work	3	:zsh	0	:##	df65,232x54,0,0,45	:
+window	work	4	:zsh	0	:##	6680,232x54,0,0{116x54,0,0,46,115x54,117,0,47}	:
+state		

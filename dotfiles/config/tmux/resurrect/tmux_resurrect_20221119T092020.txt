@@ -1,0 +1,6 @@
+pane	big3d	1	1	:*	1	manjarog	:/home/deep/projects/work/Big3D	1	zsh	:
+pane	big3d	1	1	:*	2	manjarog	:/home/deep/projects/work/Big3D	0	zsh	:
+pane	big3d	2	0	:-	1	manjarog	:/home/deep/projects/work/Big3D	1	zsh	:
+window	big3d	1	:zsh	1	:*	9147,232x54,0,0{116x54,0,0,1,115x54,117,0,2}	:
+window	big3d	2	:zsh	0	:-	be60,232x54,0,0,3	:
+state	big3d	

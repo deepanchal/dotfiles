@@ -93,6 +93,12 @@ dotfiles:
   f_tool-versions:
     src: tool-versions
     dst: ~/.tool-versions
+  d_tmux:
+    src: config/tmux
+    dst: ~/.config/tmux
+    upignore:
+    - .tmux
+    - plugins
 profiles:
   manjarog:
     dotfiles:
@@ -119,6 +125,7 @@ profiles:
     - d_scripts
     - d_omz_custom
     - f_tool-versions
+    - d_tmux
   octopi:
     dotfiles:
     - f_bashrc
