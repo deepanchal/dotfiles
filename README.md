@@ -22,3 +22,7 @@ My current system config files.
                                GPU: AMD ATI Radeon Vega Series / Radeon Vega Mobile Series
                                Memory: 15569MiB / 39514MiB
 ```
+
+## Screenshots
+
+![screenshot1](screenshots/screenshot1.png)
