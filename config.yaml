@@ -35,7 +35,7 @@ dotfiles:
     src: config/latte
     dst: ~/.config/latte
     upignore:
-      - '*.lock'
+    - '*.lock'
   d_alacritty:
     src: config/alacritty
     dst: ~/.config/alacritty
@@ -49,7 +49,7 @@ dotfiles:
     src: config/nvim/lua/user
     dst: ~/.config/nvim/lua/user
     actions:
-      - install_astronvim
+    - install_astronvim
   f_face:
     src: face
     dst: ~/.face
@@ -65,9 +65,6 @@ dotfiles:
   f_config:
     src: config/i3/config
     dst: ~/.config/i3/config
-  f_tmux.conf.local:
-    src: tmux.conf.local
-    dst: ~/.tmux.conf.local
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
@@ -91,46 +88,44 @@ dotfiles:
     src: oh-my-zsh/custom
     dst: ~/.oh-my-zsh/custom
     upignore:
-      - plugins
-      - themes
+    - plugins
+    - themes
   f_tool-versions:
     src: tool-versions
     dst: ~/.tool-versions
 profiles:
   manjarog:
     dotfiles:
-      - f_bashrc
-      - f_zshrc
-      - f_vimrc
-      - f_ideavimrc
-      - f_gitconfig
-      - d_latte
-      - d_alacritty
-      - f_p10k.zsh
-      - d_fusuma
-      - d_astronvim_user
-      - f_face
-      - f_zshenv
-      - f_aliases
-      - d_kitty
-      - f_config
-      - f_tmux.conf.local
-      - f_starship.toml
-      - f_config.yml
-      - f_config.kdl
-      - f_config.toml
-      - f_gh_config.yml
-      - d_scripts
-      - d_omz_custom
-      - f_tool-versions
+    - f_bashrc
+    - f_zshrc
+    - f_vimrc
+    - f_ideavimrc
+    - f_gitconfig
+    - d_latte
+    - d_alacritty
+    - f_p10k.zsh
+    - d_fusuma
+    - d_astronvim_user
+    - f_face
+    - f_zshenv
+    - f_aliases
+    - d_kitty
+    - f_config
+    - f_starship.toml
+    - f_config.yml
+    - f_config.kdl
+    - f_config.toml
+    - f_gh_config.yml
+    - d_scripts
+    - d_omz_custom
+    - f_tool-versions
   octopi:
     dotfiles:
-      - f_bashrc
-      - f_zshrc
-      - f_vimrc
-      - f_gitconfig
-      - f_p10k.zsh
-      - d_astronvim_user
-      - f_zshenv
-      - f_aliases
-      - f_tmux.conf.local
+    - f_bashrc
+    - f_zshrc
+    - f_vimrc
+    - f_gitconfig
+    - f_p10k.zsh
+    - d_astronvim_user
+    - f_zshenv
+    - f_aliases
