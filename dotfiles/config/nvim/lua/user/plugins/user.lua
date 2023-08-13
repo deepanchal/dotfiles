@@ -190,6 +190,8 @@ return {
   {
     "jackMort/ChatGPT.nvim",
     event = "VeryLazy",
+    -- See: https://github.com/jackMort/ChatGPT.nvim/issues/265#issuecomment-1676188382
+    commit = "24bcca7",
     config = function() require("chatgpt").setup() end,
     dependencies = {
       "MunifTanjim/nui.nvim",

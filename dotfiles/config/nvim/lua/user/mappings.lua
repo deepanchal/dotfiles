@@ -62,6 +62,11 @@ return {
       ":!eslint_d --quiet --fix %<cr>",
       desc = "Fix ESLint errors in current file",
     },
+    -- ChatGPT
+    ["<leader>ai"] = {
+      ":ChatGPT<cr>",
+      desc = "Open ChatGPT chat",
+    },
   },
   v = {
     J = {
