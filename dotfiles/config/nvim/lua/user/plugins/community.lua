@@ -37,5 +37,5 @@ return {
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
 
   -- Utility
-  { import = "astrocommunity.utility.transparent-nvim" },
+  -- { import = "astrocommunity.utility.transparent-nvim" },
 }

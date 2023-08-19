@@ -54,7 +54,7 @@ return {
     },
     -- Prettier
     ["<leader>lpf"] = {
-      ":!prettierd --loglevel silent --write %<cr>",
+      ":!prettier --log-level=silent --write %<cr>",
       desc = "Format current file with Prettier",
     },
     -- Eslint
