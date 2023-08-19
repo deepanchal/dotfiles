@@ -184,6 +184,8 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Custom added for rtx. See: https://github.com/romkatv/powerlevel10k/issues/2212#issuecomment-1492570702
+[[ -f ~/.p10k.rtx.zsh ]] && source ~/.p10k.rtx.zsh
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
