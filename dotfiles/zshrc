@@ -216,3 +216,6 @@ source <(procs --gen-completion-out bash)
 # Init Atuin. See: https://github.com/ellie/atuin
 eval "$(atuin init zsh)"
 
+# Set java home
+# . ~/.asdf/plugins/java/set-java-home.zsh
+
