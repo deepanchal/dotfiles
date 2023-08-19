@@ -61,6 +61,7 @@ alias errors="journalctl -b -p err | less"
 # bat related config
 alias cat="bat"                 # batcat https://github.com/sharkdp/bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 alias bathelp='bat --plain --language=help'
 bhelp () {
     "$@" --help 2>&1 | bathelp
