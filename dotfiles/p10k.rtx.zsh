@@ -14,13 +14,15 @@
 () {
   function prompt_rtx() {
     # All plugins
-    # local plugins=("${(@f)$(rtx current 2>/dev/null)}")
+    # local plugins=("${(@f)$(rtx current 3>/dev/null)}")
 
     # Plugins excluding ~/.tool-versions
-    local plugins=("${(@f)$(rtx ls --current 2>/dev/null | awk '$3!="~/.tool-versions" {print $1, $2}')}")
+    # local plugins=("${(@f)$(rtx ls --current 2>/dev/null | awk '$3!="~/.tool-versions" {print $1, $2}')}")
 
     # Plugins including rtx's config.toml
     # local plugins=("${(@f)$(rtx ls --current 2>/dev/null | awk '!/\(symlink\)/ && $3!="~/.config/rtx/config.toml" {print $1, $2}')}")
+
+    local plugins=("${(@f)$(rtx ls --current 2>/dev/null | awk '!/\(symlink\)/ && $3!="~/.tool-versions" && $3!="~/.config/rtx/config.toml" {print $1, $2}')}")
 
     local plugin
     for plugin in ${(k)plugins}; do
@@ -31,24 +33,24 @@
     done
   }
 
-  typeset -g POWERLEVEL9K_RTX_FOREGROUND=66
+  typeset -g POWERLEVEL9K_RTX_FOREGROUND=6
 
-  typeset -g POWERLEVEL9K_RTX_DOTNET_CORE_FOREGROUND=134
-  typeset -g POWERLEVEL9K_RTX_ELIXIR_FOREGROUND=129
-  typeset -g POWERLEVEL9K_RTX_ERLANG_FOREGROUND=125
-  typeset -g POWERLEVEL9K_RTX_FLUTTER_FOREGROUND=38
-  typeset -g POWERLEVEL9K_RTX_GOLANG_FOREGROUND=37
-  typeset -g POWERLEVEL9K_RTX_HASKELL_FOREGROUND=172
-  typeset -g POWERLEVEL9K_RTX_JAVA_FOREGROUND=32
-  typeset -g POWERLEVEL9K_RTX_JULIA_FOREGROUND=70
-  typeset -g POWERLEVEL9K_RTX_LUA_FOREGROUND=32
-  typeset -g POWERLEVEL9K_RTX_NODEJS_FOREGROUND=70
-  typeset -g POWERLEVEL9K_RTX_PERL_FOREGROUND=67
-  typeset -g POWERLEVEL9K_RTX_PHP_FOREGROUND=99
-  typeset -g POWERLEVEL9K_RTX_POSTGRES_FOREGROUND=31
-  typeset -g POWERLEVEL9K_RTX_PYTHON_FOREGROUND=37
-  typeset -g POWERLEVEL9K_RTX_RUBY_FOREGROUND=168
-  typeset -g POWERLEVEL9K_RTX_RUST_FOREGROUND=37
+  typeset -g POWERLEVEL9K_RTX_RUBY_FOREGROUND=1
+  typeset -g POWERLEVEL9K_RTX_PYTHON_FOREGROUND=6
+  typeset -g POWERLEVEL9K_RTX_GOLANG_FOREGROUND=6
+  typeset -g POWERLEVEL9K_RTX_NODEJS_FOREGROUND=2
+  typeset -g POWERLEVEL9K_RTX_RUST_FOREGROUND=4
+  typeset -g POWERLEVEL9K_RTX_DOTNET_CORE_FOREGROUND=5
+  typeset -g POWERLEVEL9K_RTX_FLUTTER_FOREGROUND=4
+  typeset -g POWERLEVEL9K_RTX_LUA_FOREGROUND=4
+  typeset -g POWERLEVEL9K_RTX_JAVA_FOREGROUND=4
+  typeset -g POWERLEVEL9K_RTX_PERL_FOREGROUND=6
+  typeset -g POWERLEVEL9K_RTX_ERLANG_FOREGROUND=1
+  typeset -g POWERLEVEL9K_RTX_ELIXIR_FOREGROUND=5
+  typeset -g POWERLEVEL9K_RTX_POSTGRES_FOREGROUND=6
+  typeset -g POWERLEVEL9K_RTX_PHP_FOREGROUND=5
+  typeset -g POWERLEVEL9K_RTX_HASKELL_FOREGROUND=3
+  typeset -g POWERLEVEL9K_RTX_JULIA_FOREGROUND=2
 
   # Substitute the default asdf prompt element
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=("${POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS[@]/asdf/rtx}")
