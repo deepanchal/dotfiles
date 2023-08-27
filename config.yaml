@@ -119,6 +119,13 @@ dotfiles:
     dst: ~/.config/btop
     upignore:
     - '*.log'
+  d_vscode:
+    src: config/Code/User
+    dst: ~/.config/Code/User
+    upignore:
+    - '!settings.json'
+    - '!keybindings.json'
+    - '[a-zA-Z0-9]*'
 profiles:
   manjarog:
     dotfiles:
@@ -152,6 +159,7 @@ profiles:
     - d_flameshot
     - d_bottom
     - d_btop
+    - d_vscode
   octopi:
     dotfiles:
     - f_bashrc
