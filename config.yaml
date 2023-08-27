@@ -139,7 +139,10 @@ dotfiles:
     src: config/glab-cli
     dst: ~/.config/glab-cli
     upignore:
-    - 'config.yml' # ignore bc glab-cli stores auth token in this file
+    - config.yml   # ignore bc glab-cli stores auth token in this file
+  d_lazydocker:
+    src: config/lazydocker
+    dst: ~/.config/lazydocker
 profiles:
   manjarog:
     dotfiles:
@@ -178,6 +181,7 @@ profiles:
     - d_dnote
     - d_gitui
     - d_glab-cli
+    - d_lazydocker
   octopi:
     dotfiles:
     - f_bashrc
