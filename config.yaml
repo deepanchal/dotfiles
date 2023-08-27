@@ -102,6 +102,9 @@ dotfiles:
   f_p10k.rtx.zsh:
     src: p10k.rtx.zsh
     dst: ~/.p10k.rtx.zsh
+  d_paru:
+    src: config/paru
+    dst: ~/.config/paru
 profiles:
   manjarog:
     dotfiles:
@@ -130,6 +133,7 @@ profiles:
     - f_tool-versions
     - d_tmux
     - f_p10k.rtx.zsh
+    - d_paru
   octopi:
     dotfiles:
     - f_bashrc
