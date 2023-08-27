@@ -135,6 +135,11 @@ dotfiles:
   d_gitui:
     src: config/gitui
     dst: ~/.config/gitui
+  d_glab-cli:
+    src: config/glab-cli
+    dst: ~/.config/glab-cli
+    upignore:
+    - 'config.yml' # ignore bc glab-cli stores auth token in this file
 profiles:
   manjarog:
     dotfiles:
@@ -172,6 +177,7 @@ profiles:
     - d_direnv
     - d_dnote
     - d_gitui
+    - d_glab-cli
   octopi:
     dotfiles:
     - f_bashrc
