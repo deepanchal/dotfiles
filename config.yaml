@@ -146,6 +146,11 @@ dotfiles:
   d_neofetch:
     src: config/neofetch
     dst: ~/.config/neofetch
+  d_nushell:
+    src: config/nushell
+    dst: ~/.config/nushell
+    upignore:
+    - 'history.txt'
 profiles:
   manjarog:
     dotfiles:
@@ -186,6 +191,7 @@ profiles:
     - d_glab-cli
     - d_lazydocker
     - d_neofetch
+    - d_nushell
   octopi:
     dotfiles:
     - f_bashrc
