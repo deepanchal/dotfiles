@@ -173,6 +173,9 @@ dotfiles:
   f_touchpadxlibinputrc:
     src: config/touchpadxlibinputrc
     dst: ~/.config/touchpadxlibinputrc
+  d_shell_gpt_roles:
+    src: config/shell_gpt/roles
+    dst: ~/.config/shell_gpt/roles
 profiles:
   manjarog:
     dotfiles:
@@ -221,6 +224,7 @@ profiles:
     - f_spotify-tui_config.yml
     - f_touchpadrc
     - f_touchpadxlibinputrc
+    - d_shell_gpt_roles
   octopi:
     dotfiles:
     - f_bashrc
