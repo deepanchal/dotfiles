@@ -160,6 +160,9 @@ dotfiles:
   f_qalc.cfg:
     src: config/qalculate/qalc.cfg
     dst: ~/.config/qalculate/qalc.cfg
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
 profiles:
   manjarog:
     dotfiles:
@@ -204,6 +207,7 @@ profiles:
     - d_picom
     - d_polybar
     - f_qalc.cfg
+    - d_rofi
   octopi:
     dotfiles:
     - f_bashrc

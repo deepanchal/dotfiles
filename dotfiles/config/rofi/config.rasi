@@ -1,0 +1,38 @@
+configuration{
+    modes: [ combi, calc, drun, window, run, filebrowser ];
+    combi-modes: [ drun, run ];
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-combi: "  Combi";
+    display-calc: "󰪚  Calc";
+    display-drun: "  Apps";
+    display-run: "   Run";
+    display-window: "  Window";
+    display-Network: "󰤨  Network";
+    display-filebrowser: "  Files";
+    sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"
+
+window {
+    height: 40%;
+    width: 30%;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 1;
+    background-color: @bg-col;
+}
+
