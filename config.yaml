@@ -157,6 +157,9 @@ dotfiles:
   d_polybar:
     src: config/polybar
     dst: ~/.config/polybar
+  f_qalc.cfg:
+    src: config/qalculate/qalc.cfg
+    dst: ~/.config/qalculate/qalc.cfg
 profiles:
   manjarog:
     dotfiles:
@@ -200,6 +203,7 @@ profiles:
     - d_nushell
     - d_picom
     - d_polybar
+    - f_qalc.cfg
   octopi:
     dotfiles:
     - f_bashrc
