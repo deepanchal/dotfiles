@@ -108,6 +108,9 @@ dotfiles:
   d_atuin:
     src: config/atuin
     dst: ~/.config/atuin
+  d_flameshot:
+    src: config/flameshot
+    dst: ~/.config/flameshot
 profiles:
   manjarog:
     dotfiles:
@@ -138,6 +141,7 @@ profiles:
     - f_p10k.rtx.zsh
     - d_paru
     - d_atuin
+    - d_flameshot
   octopi:
     dotfiles:
     - f_bashrc
