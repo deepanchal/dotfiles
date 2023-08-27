@@ -163,6 +163,9 @@ dotfiles:
   d_rofi:
     src: config/rofi
     dst: ~/.config/rofi
+  f_spotify-tui_config.yml:
+    src: config/spotify-tui/config.yml
+    dst: ~/.config/spotify-tui/config.yml
 profiles:
   manjarog:
     dotfiles:
@@ -208,6 +211,7 @@ profiles:
     - d_polybar
     - f_qalc.cfg
     - d_rofi
+    - f_spotify-tui_config.yml
   octopi:
     dotfiles:
     - f_bashrc
