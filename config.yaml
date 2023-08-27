@@ -105,6 +105,9 @@ dotfiles:
   d_paru:
     src: config/paru
     dst: ~/.config/paru
+  d_atuin:
+    src: config/atuin
+    dst: ~/.config/atuin
 profiles:
   manjarog:
     dotfiles:
@@ -134,6 +137,7 @@ profiles:
     - d_tmux
     - f_p10k.rtx.zsh
     - d_paru
+    - d_atuin
   octopi:
     dotfiles:
     - f_bashrc
