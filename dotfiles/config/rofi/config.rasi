@@ -1,5 +1,5 @@
-configuration{
-    modes: [ combi, calc, drun, window, run, filebrowser ];
+configuration {
+    modes: [ combi, calc, filebrowser, window, ssh ];
     combi-modes: [ drun, run ];
     icon-theme: "Oranchelo";
     show-icons: true;
@@ -8,13 +8,14 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-combi: "  Combi";
-    display-calc: "󰪚  Calc";
-    display-drun: "  Apps";
+    display-combi: "   Search";
+    display-calc: " 󰪚  Calc";
+    display-drun: "   Apps";
     display-run: "   Run";
-    display-window: "  Window";
-    display-Network: "󰤨  Network";
-    display-filebrowser: "  Files";
+    display-window: "   Windows";
+    display-Network: " 󰤨  Network";
+    display-filebrowser: "   Files";
+    display-ssh: "   SSH";
     sidebar-mode: true;
 }
 
