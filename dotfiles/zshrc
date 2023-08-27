@@ -128,6 +128,7 @@ plugins=(
   projen                        # projen autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/projen && projen completion > $ZSH_CUSTOM/plugins/projen/_projen)
   python                        # python aliases
   ripgrep                       # ripgrep autocompletions
+  rust                          # rust autocompletions
   rsync                         # rsync aliases
   rtx                           # rtx (asdf clone) completions
   systemd                       # systemd aliases
