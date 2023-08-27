@@ -111,6 +111,9 @@ dotfiles:
   d_flameshot:
     src: config/flameshot
     dst: ~/.config/flameshot
+  d_bottom:
+    src: config/bottom
+    dst: ~/.config/bottom
 profiles:
   manjarog:
     dotfiles:
@@ -142,6 +145,7 @@ profiles:
     - d_paru
     - d_atuin
     - d_flameshot
+    - d_bottom
   octopi:
     dotfiles:
     - f_bashrc
