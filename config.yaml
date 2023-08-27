@@ -154,6 +154,9 @@ dotfiles:
   d_picom:
     src: config/picom
     dst: ~/.config/picom
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
 profiles:
   manjarog:
     dotfiles:
@@ -196,6 +199,7 @@ profiles:
     - d_neofetch
     - d_nushell
     - d_picom
+    - d_polybar
   octopi:
     dotfiles:
     - f_bashrc
