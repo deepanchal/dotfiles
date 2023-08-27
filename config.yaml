@@ -126,6 +126,9 @@ dotfiles:
     - '!settings.json'
     - '!keybindings.json'
     - '[a-zA-Z0-9]*'
+  d_direnv:
+    src: config/direnv
+    dst: ~/.config/direnv
 profiles:
   manjarog:
     dotfiles:
@@ -160,6 +163,7 @@ profiles:
     - d_bottom
     - d_btop
     - d_vscode
+    - d_direnv
   octopi:
     dotfiles:
     - f_bashrc
