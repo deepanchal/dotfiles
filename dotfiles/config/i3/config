@@ -160,9 +160,7 @@ bindsym $mod+x move workspace to output right
 # bindsym Mod4+Shift+f [class="Alacritty"] scratchpad show;
 
 # rofi
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu -font "Inter 17" '
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -i -dmenu '
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
+bindsym $mod+d exec "rofi -show combi"
 
 # krunner instead of dmenu
 # set $menu --no-startup-id qdbus org.kde.krunner /App display
