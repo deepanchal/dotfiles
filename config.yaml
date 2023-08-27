@@ -132,6 +132,9 @@ dotfiles:
   d_dnote:
     src: config/dnote
     dst: ~/.config/dnote
+  d_gitui:
+    src: config/gitui
+    dst: ~/.config/gitui
 profiles:
   manjarog:
     dotfiles:
@@ -168,6 +171,7 @@ profiles:
     - d_vscode
     - d_direnv
     - d_dnote
+    - d_gitui
   octopi:
     dotfiles:
     - f_bashrc
