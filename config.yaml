@@ -151,6 +151,9 @@ dotfiles:
     dst: ~/.config/nushell
     upignore:
     - 'history.txt'
+  d_picom:
+    src: config/picom
+    dst: ~/.config/picom
 profiles:
   manjarog:
     dotfiles:
@@ -192,6 +195,7 @@ profiles:
     - d_lazydocker
     - d_neofetch
     - d_nushell
+    - d_picom
   octopi:
     dotfiles:
     - f_bashrc
