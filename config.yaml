@@ -166,6 +166,13 @@ dotfiles:
   f_spotify-tui_config.yml:
     src: config/spotify-tui/config.yml
     dst: ~/.config/spotify-tui/config.yml
+  f_touchpadrc:
+    src: config/touchpadrc
+    dst: ~/.config/touchpadrc
+    chmod: '600'
+  f_touchpadxlibinputrc:
+    src: config/touchpadxlibinputrc
+    dst: ~/.config/touchpadxlibinputrc
 profiles:
   manjarog:
     dotfiles:
@@ -212,6 +219,8 @@ profiles:
     - f_qalc.cfg
     - d_rofi
     - f_spotify-tui_config.yml
+    - f_touchpadrc
+    - f_touchpadxlibinputrc
   octopi:
     dotfiles:
     - f_bashrc

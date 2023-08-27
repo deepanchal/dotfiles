@@ -1,0 +1,7 @@
+[ASUE1209:00 04F3:319F Touchpad]
+clickMethodAreas=false
+clickMethodClickfinger=true
+naturalScroll=true
+
+[SynPS/2 Synaptics TouchPad]
+tapToClick=true
