@@ -150,7 +150,7 @@ dotfiles:
     src: config/nushell
     dst: ~/.config/nushell
     upignore:
-    - 'history.txt'
+    - history.txt
   d_picom:
     src: config/picom
     dst: ~/.config/picom
