@@ -114,6 +114,11 @@ dotfiles:
   d_bottom:
     src: config/bottom
     dst: ~/.config/bottom
+  d_btop:
+    src: config/btop
+    dst: ~/.config/btop
+    upignore:
+    - '*.log'
 profiles:
   manjarog:
     dotfiles:
@@ -146,6 +151,7 @@ profiles:
     - d_atuin
     - d_flameshot
     - d_bottom
+    - d_btop
   octopi:
     dotfiles:
     - f_bashrc
