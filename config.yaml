@@ -143,6 +143,9 @@ dotfiles:
   d_lazydocker:
     src: config/lazydocker
     dst: ~/.config/lazydocker
+  d_neofetch:
+    src: config/neofetch
+    dst: ~/.config/neofetch
 profiles:
   manjarog:
     dotfiles:
@@ -182,6 +185,7 @@ profiles:
     - d_gitui
     - d_glab-cli
     - d_lazydocker
+    - d_neofetch
   octopi:
     dotfiles:
     - f_bashrc
