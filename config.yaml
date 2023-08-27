@@ -129,6 +129,9 @@ dotfiles:
   d_direnv:
     src: config/direnv
     dst: ~/.config/direnv
+  d_dnote:
+    src: config/dnote
+    dst: ~/.config/dnote
 profiles:
   manjarog:
     dotfiles:
@@ -164,6 +167,7 @@ profiles:
     - d_btop
     - d_vscode
     - d_direnv
+    - d_dnote
   octopi:
     dotfiles:
     - f_bashrc

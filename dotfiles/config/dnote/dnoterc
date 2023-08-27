@@ -1,0 +1,3 @@
+editor: nvim
+apiEndpoint: https://api.getdnote.com
+enableUpgradeCheck: true
