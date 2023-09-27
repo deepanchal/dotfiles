@@ -157,6 +157,12 @@ bindkey '^ ' autosuggest-accept
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
+# Increase zsh history
+# See: https://github.com/bamos/zsh-history-analysis/blob/master/README.md
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
