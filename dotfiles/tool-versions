@@ -1,6 +1,6 @@
 direnv     2.32.3
 nodejs     lts
-pnpm       8.6.0
+pnpm       8.7.4
 #java      openjdk-17.0.2
 #java      adoptopenjdk-8.0.272+10
 java       adoptopenjdk-17.0.8+7
