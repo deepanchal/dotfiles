@@ -1,6 +1,6 @@
 configuration {
-    modes: [ combi, calc, filebrowser, window, ssh ];
-    combi-modes: [ drun, run ];
+    modes: [ combi, calc, "clipboard:greenclip print", filebrowser, window, ssh ];
+    combi-modes: [ drun, run, "clipboard:greenclip print" ];
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "alacritty";
@@ -15,6 +15,7 @@ configuration {
     display-window: "   Windows";
     display-Network: " 󰤨  Network";
     display-filebrowser: "   Files";
+    display-clipboard: "   Clip";
     display-ssh: "   SSH";
     sidebar-mode: true;
 }
@@ -23,7 +24,7 @@ configuration {
 
 window {
     height: 40%;
-    width: 30%;
+    width: 40%;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
