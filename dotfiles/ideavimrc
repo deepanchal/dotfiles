@@ -78,11 +78,17 @@ nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <leader>en :action EditSourceInNewWindow<CR>
 nnoremap <leader>n :action NextWindow<CR>
+
+""" Close buffer
+nnoremap <leader>c :action CloseContent<CR>
 nnoremap <leader>q :action CloseContent<CR>
 
 """ Editing source code
 vnoremap < <gv
 vnoremap > >gv
+
+""" Git
+nnoremap <leader>gh :action Vcs.RollbackChangedLines<CR>
 
 " Move visual block
 vnoremap J :m '>+1<CR>
@@ -100,7 +106,6 @@ nnoremap zc :action CollapseRegion<CR>
 nnoremap zo :action ExpandRegion<CR>
 nnoremap <leader>zc :action CollapseAllRegions<CR>
 nnoremap <leader>zo :action ExpandAllRegions<CR>
-nnoremap <leader>c :action CommentByLineComment<CR>
 " nnoremap <c-r> :action RecentFiles<CR>
 nnoremap <leader>l :action RecentLocations<CR>
 " open recent projects
@@ -113,6 +118,7 @@ nnoremap gE :action GotoPreviousError<CR>
 """ Searching and Source Code Navigation
 nnoremap <c-a> :action GotoAction<CR>
 nnoremap <c-f> :action GotoFile<CR>
+
 nnoremap <leader>u :action FindUsages<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
@@ -144,8 +150,10 @@ nnoremap ,n :action ActivateDebugToolWindow<CR>
 " AstroNvim like mappings
 nmap <leader>w :action SaveAll<CR>
 nmap <leader>/ :action CommentByLineComment<CR>
+vmap <leader>/ :action CommentByLineComment<CR>
 nmap <leader>o :action ActivateProjectToolWindow<CR>
 nmap <leader>lf :action ReformatWithPrettierAction<CR>
+nmap <leader>lr :action RenameElement<CR>
 nmap <leader>ff :action GotoFile<CR>
 nmap <leader>fw :action FindInPath<CR>
 nnoremap H :action PreviousTab<CR>
