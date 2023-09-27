@@ -176,6 +176,9 @@ dotfiles:
   d_shell_gpt_roles:
     src: config/shell_gpt/roles
     dst: ~/.config/shell_gpt/roles
+  d_ripgrep:
+    src: config/ripgrep
+    dst: ~/.config/ripgrep
 profiles:
   manjarog:
     dotfiles:
@@ -225,6 +228,7 @@ profiles:
     - f_touchpadrc
     - f_touchpadxlibinputrc
     - d_shell_gpt_roles
+    - d_ripgrep
   octopi:
     dotfiles:
     - f_bashrc
