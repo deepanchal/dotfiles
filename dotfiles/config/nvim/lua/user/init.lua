@@ -90,6 +90,7 @@ return {
     unmap("n", "<leader>fw") -- unmap find words
 
     -- map <leader>ff to search in hidden files excluding .git dir
+    -- Other ripgrep flags come from ~/.config/ripgrep/.ripgreprc
     map(
       "n",
       "<leader>ff",
@@ -99,14 +100,6 @@ return {
             "rg",
             "--hidden",
             "--files",
-            "--iglob",
-            "!.git",
-            "--iglob",
-            "!node_modules",
-            "--iglob",
-            "!dist",
-            "--iglob",
-            "!coverage",
             "--no-ignore-vcs",
           },
         }
@@ -115,6 +108,7 @@ return {
     )
 
     -- map <leader>fw to search for words in hidden files excluding .git dir
+    -- Other ripgrep flags come from ~/.config/ripgrep/.ripgreprc
     map(
       "n",
       "<leader>fw",
@@ -124,14 +118,6 @@ return {
             "rg",
             "--hidden",
             "--column",
-            "--iglob",
-            "!.git",
-            "--iglob",
-            "!node_modules",
-            "--iglob",
-            "!dist",
-            "--iglob",
-            "!coverage",
             "--no-ignore-vcs",
           },
         }
