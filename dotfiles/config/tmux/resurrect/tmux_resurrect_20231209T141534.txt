@@ -1,0 +1,29 @@
+pane	ccu	1	1	:##*	1	manjarog	:/home/deep/projects/work/crisiscleanup	0	zsh	:
+pane	ccu	1	1	:##*	2	manjarog	:/home/deep/projects/work/crisiscleanup	1	zsh	:
+pane	ccu	2	0	:##-	1	manjarog	:/home/deep/projects/work/crisiscleanup	1	zsh	:
+pane	personal	1	1	:##*	1	manjarog	:/home/deep/projects/personal	1	zsh	:
+pane	personal	1	1	:##*	2	manjarog	:/home/deep/projects/personal	0	zsh	:
+pane	personal	2	0	:-	1	manjarog	:/home/deep/projects/personal	1	zsh	:
+pane	stm	1	1	:##*	1	manjarog	:/home/deep/projects/work/stm	0	zsh	:
+pane	stm	1	1	:##*	2	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	stm	2	0	:-	1	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	stm	3	0	:##	1	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	work	1	0	:##	1	manjarog	:/home/deep/projects/work/arroyodev/illumibot	0	zsh	:
+pane	work	1	0	:##	2	manjarog	:/home/deep/projects/work/arroyodev/illumibot	1	git	:
+pane	work	2	1	:*	1	manjarog	:/home/deep/projects/work/arroyodev/illumibot	1	lazygit	:lazygit
+pane	work	3	0	:-	1	manjarog	:/home/deep/projects/work/arroyodev/illumibot	1	nvim	:nvim
+pane	work	4	0	:##	1	manjarog	:/home/deep/projects/work/arroyodev/illumibot	1	zsh	:
+pane	work	5	0	:##	1	manjarog	:/home/deep/projects/work	1	zsh	:
+window	ccu	1	:zsh	1	:##*	c3df,284x73,0,0{142x73,0,0,1,141x73,143,0,2}	:
+window	ccu	2	:zsh	0	:##-	c0a0,284x73,0,0,3	:
+window	personal	1	:zsh	1	:##*	43e4,284x73,0,0{142x73,0,0,4,141x73,143,0,5}	:
+window	personal	2	:zsh	0	:-	c0a3,284x73,0,0,6	:
+window	stm	1	:zsh	1	:##*	c3e8,284x73,0,0{142x73,0,0,7,141x73,143,0,8}	:
+window	stm	2	:zsh	0	:-	c0a6,284x73,0,0,9	:
+window	stm	3	:zsh	0	:##	607f,284x73,0,0,10	:
+window	work	1	:zsh	0	:##	ee15,284x73,0,0{142x73,0,0,11,141x73,143,0,12}	:
+window	work	2	:lazygit	1	:*	6082,284x73,0,0,13	:
+window	work	3	:nvim	0	:-	6083,284x73,0,0,14	:
+window	work	4	:zsh	0	:##	6084,284x73,0,0,15	:
+window	work	5	:zsh	0	:##	6085,284x73,0,0,16	:
+state	work	ccu

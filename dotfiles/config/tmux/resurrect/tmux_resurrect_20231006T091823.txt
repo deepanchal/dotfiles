@@ -1,0 +1,27 @@
+pane	ccu	1	1	:*	1	manjarog	:/home/deep/projects/work/crisiscleanup	0	zsh	:
+pane	ccu	1	1	:*	2	manjarog	:/home/deep/projects/work/crisiscleanup	1	zsh	:
+pane	ccu	2	0	:-	1	manjarog	:/home/deep/projects/work/crisiscleanup	1	zsh	:
+pane	personal	1	1	:##*	1	manjarog	:/home/deep/projects/personal	1	zsh	:
+pane	personal	1	1	:##*	2	manjarog	:/home/deep/projects/personal	0	zsh	:
+pane	personal	2	0	:-	1	manjarog	:/home/deep/projects/personal	1	zsh	:
+pane	stm	1	1	:##*	1	manjarog	:/home/deep/projects/work/stm	0	zsh	:
+pane	stm	1	1	:##*	2	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	stm	2	0	:##-	1	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	stm	3	0	:##	1	manjarog	:/home/deep/projects/work/stm	1	zsh	:
+pane	work	1	0	:##	1	manjarog	:/home/deep/projects/work	0	zsh	:
+pane	work	1	0	:##	2	manjarog	:/home/deep/projects/work	1	zsh	:
+pane	work	2	0	:	1	manjarog	:/home/deep/projects/work	1	zsh	:
+pane	work	3	0	:-	1	manjarog	:/home/deep/projects/work	1	zsh	:
+pane	work	4	1	:*	1	manjarog	:/home/deep/projects/work	1	zsh	:
+window	ccu	1	:zsh	1	:*	b8b1,141x72,0,0{70x72,0,0,1,70x72,71,0,2}	:
+window	ccu	2	:zsh	0	:-	ba00,141x72,0,0,3	:
+window	personal	1	:zsh	1	:##*	38bf,141x72,0,0{70x72,0,0,4,70x72,71,0,5}	:
+window	personal	2	:zsh	0	:-	ba03,141x72,0,0,6	:
+window	stm	1	:zsh	1	:##*	b8cc,141x72,0,0{70x72,0,0,7,70x72,71,0,8}	:
+window	stm	2	:zsh	0	:##-	ba06,141x72,0,0,9	:
+window	stm	3	:zsh	0	:##	5d2f,141x72,0,0,10	:
+window	work	1	:zsh	0	:##	eba4,141x72,0,0{70x72,0,0,11,70x72,71,0,12}	:
+window	work	2	:zsh	0	:	6082,284x73,0,0,13	:
+window	work	3	:zsh	0	:-	6083,284x73,0,0,14	:
+window	work	4	:zsh	1	:*	6084,284x73,0,0,15	:
+state	work	ccu
