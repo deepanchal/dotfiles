@@ -110,6 +110,7 @@ plugins=(
   docker                        # docker aliases
   docker-compose                # docker-compose aliases
   dnote                         # auto-completion for Dnote, a simple command line notebook
+  flutter                       # flutter
   fancy-ctrl-z                  # ctrl-z opens/closes vim
   fzf                           # fzf autocompletions & bindings
   gh                            # github cli
@@ -228,3 +229,7 @@ eval "$(atuin init zsh)"
 # Set java home
 # . ~/.asdf/plugins/java/set-java-home.zsh
 
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
