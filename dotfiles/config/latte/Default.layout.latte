@@ -10,8 +10,8 @@ lastScreen=12
 layoutId=
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=576
-popupWidth=576
+popupHeight=960
+popupWidth=1920
 wallpaperplugin=org.kde.image
 
 [Containments][15][Applets][100]
@@ -28,12 +28,26 @@ plugin=org.kde.plasma.mediacontroller
 [Containments][15][Applets][133][Configuration]
 PreloadWeight=0
 
+[Containments][15][Applets][134]
+immutability=1
+plugin=org.kde.plasma.nightcolorcontrol
+
+[Containments][15][Applets][134][Configuration]
+PreloadWeight=26
+
+[Containments][15][Applets][16]
+immutability=1
+plugin=org.kde.kscreen
+
+[Containments][15][Applets][16][Configuration]
+PreloadWeight=36
+
 [Containments][15][Applets][88]
 immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][15][Applets][88][Configuration]
-PreloadWeight=5
+PreloadWeight=26
 
 [Containments][15][Applets][88][Shortcuts]
 global=
@@ -50,14 +64,14 @@ immutability=1
 plugin=org.kde.plasma.printmanager
 
 [Containments][15][Applets][90][Configuration]
-PreloadWeight=44
+PreloadWeight=58
 
 [Containments][15][Applets][91]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][15][Applets][91][Configuration]
-PreloadWeight=80
+PreloadWeight=76
 
 [Containments][15][Applets][91][Configuration][ConfigDialog]
 DialogHeight=1338
@@ -65,6 +79,7 @@ DialogWidth=1271
 
 [Containments][15][Applets][91][Configuration][General]
 migrated=true
+showVirtualDevices=true
 
 [Containments][15][Applets][93]
 immutability=1
@@ -78,7 +93,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][15][Applets][94][Configuration]
-PreloadWeight=9
+PreloadWeight=100
 
 [Containments][15][Applets][95]
 immutability=1
@@ -92,21 +107,14 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][15][Applets][96][Configuration]
-PreloadWeight=100
+PreloadWeight=81
 
 [Containments][15][Applets][97]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][15][Applets][97][Configuration]
-PreloadWeight=75
-
-[Containments][15][Applets][98]
-immutability=1
-plugin=org.kde.kdeconnect
-
-[Containments][15][Applets][98][Configuration]
-PreloadWeight=20
+PreloadWeight=76
 
 [Containments][15][Applets][99]
 immutability=1
@@ -123,9 +131,9 @@ DialogWidth=1256
 PreloadWeight=26
 
 [Containments][15][General]
-extraItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod,org.kde.kscreen
+extraItems=org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod,org.kde.kscreen
 hiddenItems=org.kde.plasma.battery
-knownItems=org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod,org.kde.kscreen
+knownItems=org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.keyboardindicator,org.kde.plasma.keyboardlayout,org.kde.plasma.mediacontroller,org.kde.plasma.networkmanagement,org.kde.plasma.nightcolorcontrol,org.kde.plasma.notifications,org.kde.plasma.printmanager,org.kde.plasma.volume,org.kde.plasma.manage-inputmethod,org.kde.kscreen
 shownItems=org.kde.plasma.notifications,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.clipboard
 
 [Containments][19]
@@ -157,7 +165,7 @@ immutability=1
 plugin=org.kde.plasma.kickoff
 
 [Containments][19][Applets][112][Configuration]
-PreloadWeight=12
+PreloadWeight=56
 
 [Containments][19][Applets][112][Configuration][General]
 favoritesPortedToKAstats=true
@@ -175,7 +183,7 @@ immutability=1
 plugin=org.kde.plasma.inlineBattery
 
 [Containments][19][Applets][119][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][19][Applets][119][Configuration][ConfigDialog]
 DialogHeight=1319
@@ -257,7 +265,7 @@ immutability=1
 plugin=org.kde.latte.spacer
 
 [Containments][19][Applets][128][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][19][Applets][128][Configuration][ConfigDialog]
 DialogHeight=1319
@@ -303,7 +311,7 @@ immutability=1
 plugin=com.github.zren.todolist
 
 [Containments][19][Applets][132][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
 [Containments][19][Applets][132][Configuration][General]
 noteId=todolist
@@ -332,6 +340,7 @@ inConfigureAppletsMode=true
 lockedZoomApplets=112
 mouseWheelActions=false
 panelPosition=10
+panelShadows=false
 panelSize=100
 plasmaBackgroundForPopups=true
 screenEdgeMargin=0
