@@ -73,6 +73,7 @@ web:*.{html,css,js,jsx,ts,tsx,scss,sass,html.heex}*
 --glob=!test-results
 --glob=!playwright
 --glob=!playwright-report
+--glob=!blob-report
 
 
 ##################################
