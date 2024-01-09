@@ -15,7 +15,7 @@ golang     1.18.4
 poetry     1.1.15
 shfmt      3.5.0
 shellcheck 0.8.0
-flutter    3.3.2-stable
+flutter    3.13.7-stable
 awscli     2.13.9
 python     3.11.3
 dotnet     3.1.425
