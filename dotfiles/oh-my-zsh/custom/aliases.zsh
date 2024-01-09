@@ -2,7 +2,7 @@
 
 # Replacements
 alias vim="nvim"	        # neovim https://github.com/neovim/neovim
-alias ls="exa --icons --git"         # exa https://github.com/ogham/exa
+alias ls="eza --icons --git"         # exa https://github.com/ogham/exa
 
 # Config Aliases
 alias zshcfg="$EDITOR ~ZSH_CUSTOM"
@@ -77,6 +77,10 @@ kill-port () {
 	sudo -v
 	sudo lsof -t -i tcp:$1 | xargs -I kill
 }
+
+# VPN
+alias wg-on="wg-quick up wg1"
+alias wg-off="wg-quick down wg1"
 
 # Misc
 alias pj='pnpm projen'
