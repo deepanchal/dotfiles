@@ -11,19 +11,35 @@ shopt -s extglob
 
 # see: https://github.com/direnv/direnv/issues/73#issuecomment-152284914
 # example export_function my_func
+# export_function() {
+#   local name=$1
+#   local alias_dir=$PWD/.direnv/aliases
+#   mkdir -p "$alias_dir"
+#   PATH_add "$alias_dir"
+#   local target="$alias_dir/$name"
+#   if declare -f "$name" >/dev/null; then
+#     echo "#!$SHELL" > "$target"
+#     declare -f "$name" >> "$target" 2>/dev/null
+#     # Notice that we add shell variables to the function trigger.
+#     echo "$name \$*" >> "$target"
+#     chmod +x "$target"
+#   fi
+# }
 export_function() {
-  local name=$1
-  local alias_dir=$PWD/.direnv/aliases
-  mkdir -p "$alias_dir"
-  PATH_add "$alias_dir"
-  local target="$alias_dir/$name"
-  if declare -f "$name" >/dev/null; then
-    echo "#!$SHELL" > "$target"
-    declare -f "$name" >> "$target" 2>/dev/null
-    # Notice that we add shell variables to the function trigger.
-    echo "$name \$*" >> "$target"
-    chmod +x "$target"
-  fi
+	local name=$1
+  local sh="${2:-$SHELL}"
+	local alias_dir=$PWD/.direnv/aliases
+	mkdir -p "$alias_dir"
+	PATH_add "$alias_dir"
+	local target="$alias_dir/$name"
+	if declare -f "$name" >/dev/null; then
+		#echo "#!$SHELL" >"$target"
+    echo "#!/usr/bin/env $(basename "$sh")" > "$target"
+		declare -f "$name" >> "$target" 2>/dev/null
+		# Notice that we add shell variables to the function trigger.
+		echo "$name \$*" >>"$target"
+		chmod +x "$target"
+	fi
 }
 
 # see: https://github.com/direnv/direnv/issues/73#issuecomment-174295790

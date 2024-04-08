@@ -100,11 +100,12 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # Scripts
 export PATH="${PATH}:${HOME}/scripts"
+export PATH="${PATH}:${HOME}/.config/rofi/scripts"
 
 # MISC
 export WALLPAPER="$HOME/Pictures/wallpapers/21.jpeg"
 export PROJECTS_DIR="$HOME/projects"
 export GIT_CLIFF_CONFIG="$HOME/projects/cliff.toml"
-export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/.ripgreprc"
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME/ripgrep/ripgreprc"
 
 

@@ -2,11 +2,11 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 ##: init direnv (see: https://github.com/romkatv/powerlevel10k/blob/master/README.md#how-do-i-initialize-direnv-when-using-instant-prompt)
-(( ${+commands[direnv]} )) && emulate zsh -c "$(rtx exec direnv@latest -- direnv export zsh)"
+(( ${+commands[direnv]} )) && emulate zsh -c "$(mise exec direnv@latest -- direnv export zsh)"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-(( ${+commands[direnv]} )) && emulate zsh -c "$(rtx exec direnv@latest -- direnv hook zsh)"
+(( ${+commands[direnv]} )) && emulate zsh -c "$(mise exec direnv@latest -- direnv hook zsh)"
 
 # Init asdf
 . $HOME/.asdf/asdf.sh
@@ -124,6 +124,7 @@ plugins=(
   kubectl                       # kubectl completions/aliases
   minikube                      # minikube completions
   npm                           # npm aliases
+  pass                          # https://passwordstore.org
   pnpm                          # pnpm aliases (custom: https://github.com/ntnyq/omz-plugin-pnpm)
   poetry                        # python poetry autocompletions
   projen                        # projen autocompletions (custom: mkdir -p $ZSH_CUSTOM/plugins/projen && projen completion > $ZSH_CUSTOM/plugins/projen/_projen)
@@ -131,7 +132,7 @@ plugins=(
   ripgrep                       # ripgrep autocompletions
   rust                          # rust autocompletions
   rsync                         # rsync aliases
-  rtx                           # rtx (asdf clone) completions
+  #rtx                           # rtx (asdf clone) completions
   systemd                       # systemd aliases
   systemadmin                   # aliases/functions to make system admin's life easier
   taskwarrior                   # taskwarrior autocompletions
@@ -192,8 +193,8 @@ setopt EXTENDED_HISTORY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# Custom added for rtx. See: https://github.com/romkatv/powerlevel10k/issues/2212#issuecomment-1492570702
-[[ -f ~/.p10k.rtx.zsh ]] && source ~/.p10k.rtx.zsh
+# Custom added for mise. See: https://github.com/romkatv/powerlevel10k/issues/2212#issuecomment-1492570702
+[[ -f ~/.p10k.mise.zsh ]] && source ~/.p10k.mise.zsh
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -204,12 +205,12 @@ setopt EXTENDED_HISTORY
 # Hook direnv into your shell.
 # eval "$(asdf exec direnv hook zsh)"
 
-# Hook rtx (asdf rust clone) to shell
-eval "$(/usr/bin/rtx activate zsh)"
+# Hook mise (asdf rust clone) to shell
+eval "$(/usr/bin/mise activate zsh)"
 
 # A shortcut for asdf managed direnv.
-# rtx exec direnv@latest -- direnv
-direnv() { rtx exec direnv@latest -- direnv "$@"; }
+# mise exec direnv@latest -- direnv
+direnv() { mise exec direnv@latest -- direnv "$@"; }
 
 # tabtab source for packages
 # uninstall by removing these lines

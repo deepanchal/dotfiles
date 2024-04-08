@@ -572,6 +572,7 @@ set-option -sa terminal-overrides ',XXX:RGB'
 # 256 Color
 set -g default-terminal "screen-256color"
 set-option -sa terminal-overrides ",alacritty:RGB"
+set-option -sa terminal-overrides ",wezterm:RGB"
 
 # Direnv support
 ## see: https://github.com/direnv/direnv/wiki/Tmux

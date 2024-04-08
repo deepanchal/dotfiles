@@ -35,3 +35,6 @@ alias kctl='kubectl'
 alias kspy='kubespy'
 alias kevents="k get events --sort-by=.metadata.creationTimestamp"
 
+# Docker
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'

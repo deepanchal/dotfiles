@@ -70,14 +70,17 @@ nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 sethandler <c-j> a:vim
 sethandler <c-k> a:vim
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
 nnoremap <TAB> :action PreviousTab<CR>
 nnoremap <s-TAB> :action NextTab<CR>
 nnoremap <leader>en :action EditSourceInNewWindow<CR>
 nnoremap <leader>n :action NextWindow<CR>
+"""" Popup navigation
+inoremap <C-j> :action EditorDown<CR>
+inoremap <C-k> :action EditorUp<CR>
 
 """ Close buffer
 nnoremap <leader>c :action CloseContent<CR>
@@ -91,9 +94,9 @@ vnoremap > >gv
 nnoremap <leader>gh :action Vcs.RollbackChangedLines<CR>
 
 " Move visual block
-vnoremap J :m '>+1<CR>
+"vnoremap J :m '>+1<CR>
 " xnoremap K :m '<-2<CR>
-vnoremap K :m '<-2<CR>
+"vnoremap K :m '<-2<CR>
 
 " Put search results in the middle of the screen
 nnoremap n nzz

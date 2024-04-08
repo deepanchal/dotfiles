@@ -84,4 +84,4 @@ alias wg-off="wg-quick down wg1"
 
 # Misc
 alias pj='pnpm projen'
-alias rin='rtx install -v'
+alias min='mise install -v'

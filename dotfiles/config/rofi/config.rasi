@@ -1,6 +1,6 @@
 configuration {
-    modes: [ combi, calc, "clipboard:greenclip print", filebrowser, window, ssh ];
-    combi-modes: [ drun, run, "clipboard:greenclip print" ];
+    modes: [ combi, calc, "clipboard:greenclip print", filebrowser, window, ssh, "pass:rofi-pass-launcher" ];
+    combi-modes: [ drun, run, "clipboard:greenclip print", "pass:rofi-pass-launcher" ];
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "alacritty";
@@ -16,6 +16,7 @@ configuration {
     display-Network: " 󰤨  Network";
     display-filebrowser: "   Files";
     display-clipboard: "   Clip";
+    display-pass: "   Pass";
     display-ssh: "   SSH";
     sidebar-mode: true;
 }
