@@ -1,5 +1,8 @@
 # Dotfiles
 
+> [!CAUTION]
+> This repository is outdated. My dotfiles have been moved to my [NixOS Config](https://github.com/deepanchal/nixos).
+
 My current system config files.
 
 ```
